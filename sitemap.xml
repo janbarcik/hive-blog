@@ -61,4 +61,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://janbarcik.github.io/hive-blog/blue-light-blocking-glasses-vs-regular-glasses-which-is-better-for-sleep/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
