@@ -1,5 +1,69 @@
 [
   {
+    "title": "Electric Scooters vs E-Bikes: Which is the Better Option for Urban Commuters?",
+    "url": "https://janbarcik.github.io/hive-blog/electric-scooters-vs-e-bikes-which-is-the-better-option-for-urban-commuters/",
+    "slug": "electric-scooters-vs-e-bikes-which-is-the-better-option-for-urban-commuters",
+    "meta_description": "Discover the pros and cons of electric scooters vs e-bikes for urban commuting. Find out which option fits your lifestyle best!",
+    "worker": "Worker-6",
+    "published_at": "2026-03-07T22:33:48.640222"
+  },
+  {
+    "title": "Ring Doorbell vs Nest Cam: Which Home Security Camera is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/ring-doorbell-vs-nest-cam-which-home-security-camera-is-right-for-you/",
+    "slug": "ring-doorbell-vs-nest-cam-which-home-security-camera-is-right-for-you",
+    "meta_description": "Discover the ultimate showdown in home security with our guide on Ring Doorbell vs Nest Cam. Find the perfect camera for your safety needs today!",
+    "worker": "Worker-2",
+    "published_at": "2026-03-07T22:33:45.877257"
+  },
+  {
+    "title": "The Ultimate Buyers Guide to Best Noise-Cancelling Headphones",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-buyers-guide-to-best-noise-cancelling-headphones/",
+    "slug": "the-ultimate-buyers-guide-to-best-noise-cancelling-headphones",
+    "meta_description": "Discover the ultimate buyers guide to the best noise-cancelling headphones and find your perfect audio companion for immersive sound and tranquility.",
+    "worker": "Worker-3",
+    "published_at": "2026-03-07T22:33:41.103691"
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-07T22:33:22.586421"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-07T22:33:36.341952"
+  },
+  {
+    "title": "Top Compact Blenders Under $50 for Efficient Kitchen Use",
+    "url": "https://janbarcik.github.io/hive-blog/top-compact-blenders-under-50-for-efficient-kitchen-use/",
+    "slug": "top-compact-blenders-under-50-for-efficient-kitchen-use",
+    "meta_description": "Discover the best compact blenders under $50! Enhance your kitchen efficiency with our top picks for powerful, budget-friendly blending solutions.",
+    "worker": "Worker-4",
+    "published_at": "2026-03-07T22:34:05.451664"
+  },
+  {
+    "title": "Top Robotic Vacuum Cleaner Reviews for 2023",
+    "url": "https://janbarcik.github.io/hive-blog/top-robotic-vacuum-cleaner-reviews-for-2023/",
+    "slug": "top-robotic-vacuum-cleaner-reviews-for-2023",
+    "meta_description": "Discover the best robotic vacuum cleaner reviews of 2023! Uncover top picks, features, and comparisons to find the perfect cleaning companion for your home",
+    "worker": "Worker-5",
+    "published_at": "2026-03-07T22:33:38.677531"
+  },
+  {
+    "title": "Top Smart Thermostat Reviews for 2023: Optimize Your Home's Climate",
+    "url": "https://janbarcik.github.io/hive-blog/top-smart-thermostat-reviews-for-2023-optimize-your-home-s-climate/",
+    "slug": "top-smart-thermostat-reviews-for-2023-optimize-your-home-s-climate",
+    "meta_description": "Discover the best smart thermostat reviews of 2023 to enhance your home's comfort and efficiency. Optimize your climate control today!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-07T22:33:42.959857"
+  },
+  {
     "title": "Nest Cam vs Ring Cam: Which Home Security Camera Fits Your Needs?",
     "url": "https://janbarcik.github.io/hive-blog/nest-cam-vs-ring-cam-which-home-security-camera-fits-your-needs/",
     "slug": "nest-cam-vs-ring-cam-which-home-security-camera-fits-your-needs",
@@ -14,22 +78,6 @@
     "meta_description": "Discover which is the top choice for commuters in our comparison of Segway Ninebot Max vs Xiaomi Mi Electric Scooter. Make your commute smarter today!",
     "worker": "Worker-6",
     "published_at": "2026-03-07T22:26:01.058827"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-07T22:25:40.748198"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-07T22:25:55.893848"
   },
   {
     "title": "Top 10 Ergonomic Office Chairs Under $50 for Comfort and Support",
