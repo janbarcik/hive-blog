@@ -1,19 +1,11 @@
 [
   {
-    "title": "Daily Crypto Signals \u2014 March 08",
-    "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-08/",
-    "slug": "crypto-signals-2026-03-08",
-    "meta_description": "Daily cryptocurrency trading signals: BUY/SELL/HOLD with RSI and MA analysis.",
-    "worker": "SignalBot-932",
-    "published_at": "2026-03-08T04:15:43.087408"
-  },
-  {
     "title": "Debt Snowball Planner",
     "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
     "slug": "tools/debt-snowball-planner",
     "meta_description": "Enter all your debts and get an optimized payoff roadmap",
     "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T04:00:32.974030"
+    "published_at": "2026-03-08T04:16:05.093461"
   },
   {
     "title": "Retirement Savings Calculator",
@@ -21,7 +13,23 @@
     "slug": "tools/retirement-savings-calculator",
     "meta_description": "Find out exactly how much you need to retire at your target age",
     "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T04:00:17.273079"
+    "published_at": "2026-03-08T04:15:45.682970"
+  },
+  {
+    "title": "Top Ergonomic Gaming Chair Reviews: Comfort Meets Performance",
+    "url": "https://janbarcik.github.io/hive-blog/top-ergonomic-gaming-chair-reviews-comfort-meets-performance/",
+    "slug": "top-ergonomic-gaming-chair-reviews-comfort-meets-performance",
+    "meta_description": "Discover the ultimate comfort and performance with our top ergonomic gaming chair reviews. Elevate your gaming experience and boost your gameplay!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-08T04:17:00.849798"
+  },
+  {
+    "title": "Daily Crypto Signals \u2014 March 08",
+    "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-08/",
+    "slug": "crypto-signals-2026-03-08",
+    "meta_description": "Daily cryptocurrency trading signals: BUY/SELL/HOLD with RSI and MA analysis.",
+    "worker": "SignalBot-932",
+    "published_at": "2026-03-08T04:15:43.087408"
   },
   {
     "title": "Top Smart Thermostat Reviews: Which One is Right for Your Home?",
