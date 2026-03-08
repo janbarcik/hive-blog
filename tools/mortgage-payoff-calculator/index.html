@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mortgage Payoff Calculator</title>
-    <meta name="description" content="See how extra payments can reduce your mortgage timeline and total interest with our Mortgage Payoff Calculator.">
+    <meta name="description" content="See how extra payments slash your mortgage timeline and total interest with our Mortgage Payoff Calculator.">
     <meta property="og:title" content="Mortgage Payoff Calculator">
-    <meta property="og:description" content="Calculate how extra payments can reduce your mortgage timeline and total interest.">
+    <meta property="og:description" content="See how extra payments slash your mortgage timeline and total interest.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/mortgage-payoff-calculator">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta property="og:url" content="https://yourwebsite.com/mortgage-payoff-calculator">
+    <meta property="og:image" content="https://yourwebsite.com/image.jpg">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Mortgage Payoff Calculator",
-      "description": "See how extra payments can reduce your mortgage timeline and total interest.",
+      "description": "See how extra payments slash your mortgage timeline and total interest.",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "All",
-      "url": "https://example.com/mortgage-payoff-calculator"
+      "url": "https://yourwebsite.com/mortgage-payoff-calculator"
     }
     </script>
     <style>
@@ -28,51 +27,62 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #f4f4f9;
             color: #333;
+            background-color: #f4f4f9;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        .ad-slot {
+            margin: 20px 0;
             text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
         }
         input[type="number"] {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 8px;
+            box-sizing: border-box;
         }
         button {
-            width: 100%;
-            padding: 10px;
             background-color: #007bff;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            padding: 10px 15px;
             cursor: pointer;
         }
         button:hover {
             background-color: #0056b3;
         }
-        .results, .affiliate-box, .ad-slot, .email-signup, .share {
+        .results {
             margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
         }
         .affiliate-box {
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
             border-radius: 5px;
         }
         .affiliate-btn {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px;
+            padding: 10px 15px;
             background-color: #28a745;
             color: #fff;
             text-decoration: none;
@@ -81,154 +91,187 @@
         .affiliate-btn:hover {
             background-color: #218838;
         }
-        .email-signup input[type="email"] {
-            width: calc(100% - 120px);
-            padding: 10px;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .email-signup button {
-            width: 100px;
-            padding: 10px;
-            background-color: #17a2b8;
+        .share-btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #1da1f2;
             color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .email-signup button:hover {
-            background-color: #138496;
-        }
-        .share button {
-            width: auto;
-            padding: 10px;
-            background-color: #ffc107;
-            color: #333;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .share button:hover {
-            background-color: #e0a800;
-        }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin: 0 10px;
             text-decoration: none;
-            color: #007bff;
+            border-radius: 5px;
         }
-        nav a:hover {
-            text-decoration: underline;
+        .share-btn:hover {
+            background-color: #0d95e8;
+        }
+        .email-capture {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .email-capture input[type="email"] {
+            width: calc(100% - 110px);
+            padding: 8px;
+            box-sizing: border-box;
+            margin-right: 10px;
         }
         @media (prefers-color-scheme: dark) {
             body {
+                color: #ccc;
                 background-color: #121212;
-                color: #e0e0e0;
             }
-            .container {
-                background-color: #1e1e1e;
+            header, footer {
+                background-color: #1f1f1f;
             }
-            input[type="number"], .email-signup input[type="email"] {
-                background-color: #333;
-                color: #e0e0e0;
-                border-color: #444;
-            }
-            button, .affiliate-btn, .email-signup button, .share button {
-                color: #fff;
+            .results, .affiliate-box, .email-capture {
+                background-color: #1f1f1f;
             }
         }
         @media print {
-            .affiliate-box, .ad-slot, .email-signup, .share, nav {
+            .ad-slot, .affiliate-box, .email-capture, .share-btn {
                 display: none;
             }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/tools/">Tools</a>
-    </nav>
-    <div class="container">
+    <header>
         <h1>Mortgage Payoff Calculator</h1>
+        <nav>
+            <a href="/tools/" style="color: #fff; margin-right: 15px;">Tools Directory</a>
+            <a href="/" style="color: #fff;">Home</a>
+        </nav>
+    </header>
+    <div class="container">
         <div class="ad-slot"><!-- AdSense code here --></div>
-        <div>
-            <input type="number" id="loan_amount" placeholder="Loan Amount ($)" min="0" required>
-            <input type="number" id="interest_rate" placeholder="Interest Rate (%)" min="0" step="0.01" required>
-            <input type="number" id="loan_term_years" placeholder="Loan Term (Years)" min="0" required>
-            <input type="number" id="extra_monthly_payment" placeholder="Extra Monthly Payment ($)" min="0">
-            <button onclick="calculatePayoff()">Calculate</button>
+        <div class="form-group">
+            <label for="loan_amount">Loan Amount ($):</label>
+            <input type="number" id="loan_amount" required>
         </div>
-        <div class="results" id="results"></div>
+        <div class="form-group">
+            <label for="interest_rate">Interest Rate (%):</label>
+            <input type="number" id="interest_rate" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="loan_term_years">Loan Term (Years):</label>
+            <input type="number" id="loan_term_years" required>
+        </div>
+        <div class="form-group">
+            <label for="extra_monthly_payment">Extra Monthly Payment ($):</label>
+            <input type="number" id="extra_monthly_payment" required>
+        </div>
+        <button onclick="calculatePayoff()">Calculate</button>
+        <div class="results" id="results" style="display:none;">
+            <h3>Results</h3>
+            <p id="years_saved"></p>
+            <p id="interest_saved"></p>
+            <canvas id="amortizationChart"></canvas>
+        </div>
         <div class="affiliate-box">
             <h4>💡 Recommended</h4>
             <p>Compare today's lowest mortgage rates [affiliate link]</p>
             <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
             <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
         </div>
-        <div class="email-signup">
-            <input type="email" id="email" placeholder="Enter your email">
+        <div class="email-capture">
+            <h4>Get weekly free tools</h4>
+            <input type="email" id="email" placeholder="Enter your email" required>
             <button onclick="handleEmailSignup()">Subscribe</button>
         </div>
-        <div class="share">
-            <button onclick="sharePage()">Share this tool</button>
-        </div>
+        <a href="#" class="share-btn" onclick="shareTool()">Share this tool</a>
     </div>
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
     <script>
         function calculatePayoff() {
             const loanAmount = parseFloat(document.getElementById('loan_amount').value);
             const interestRate = parseFloat(document.getElementById('interest_rate').value) / 100 / 12;
             const loanTermMonths = parseInt(document.getElementById('loan_term_years').value) * 12;
-            const extraPayment = parseFloat(document.getElementById('extra_monthly_payment').value) || 0;
+            const extraPayment = parseFloat(document.getElementById('extra_monthly_payment').value);
 
-            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTermMonths)) {
-                alert('Please enter valid numbers for all fields.');
+            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTermMonths) || isNaN(extraPayment)) {
+                alert('Please enter valid numbers in all fields.');
                 return;
             }
 
-            let remainingBalance = loanAmount;
+            const monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTermMonths));
+            let balance = loanAmount;
             let totalInterest = 0;
             let months = 0;
+            const originalAmortization = [];
+            const newAmortization = [];
 
-            const monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTermMonths));
+            while (balance > 0) {
+                const interest = balance * interestRate;
+                const principal = monthlyPayment - interest;
+                balance -= principal;
+                totalInterest += interest;
+                originalAmortization.push({ month: months + 1, balance: balance > 0 ? balance : 0 });
 
-            while (remainingBalance > 0) {
-                const interestForMonth = remainingBalance * interestRate;
-                totalInterest += interestForMonth;
-                const principalPayment = monthlyPayment + extraPayment - interestForMonth;
-                remainingBalance -= principalPayment;
+                if (balance <= 0) break;
                 months++;
-                if (months > loanTermMonths) break; // Safety check to prevent infinite loop
             }
 
-            const yearsSaved = loanTermMonths / 12 - months / 12;
-            const interestSaved = (monthlyPayment * loanTermMonths - loanAmount) - totalInterest;
+            balance = loanAmount;
+            let newTotalInterest = 0;
+            months = 0;
 
-            document.getElementById('results').innerHTML = `
-                <h2>Results</h2>
-                <p>Years Saved: ${yearsSaved.toFixed(2)}</p>
-                <p>Interest Saved: $${interestSaved.toFixed(2)}</p>
-                <canvas id="amortizationChart" width="400" height="200"></canvas>
-            `;
+            while (balance > 0) {
+                const interest = balance * interestRate;
+                const principal = monthlyPayment + extraPayment - interest;
+                balance -= principal;
+                newTotalInterest += interest;
+                newAmortization.push({ month: months + 1, balance: balance > 0 ? balance : 0 });
+
+                if (balance <= 0) break;
+                months++;
+            }
+
+            const yearsSaved = (originalAmortization.length - newAmortization.length) / 12;
+            const interestSaved = totalInterest - newTotalInterest;
+
+            document.getElementById('years_saved').textContent = `Years Saved: ${yearsSaved.toFixed(2)}`;
+            document.getElementById('interest_saved').textContent = `Interest Saved: $${interestSaved.toFixed(2)}`;
+            document.getElementById('results').style.display = 'block';
 
             const ctx = document.getElementById('amortizationChart').getContext('2d');
             new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
-                    labels: ['Original Loan', 'With Extra Payments'],
-                    datasets: [{
-                        label: 'Total Interest',
-                        data: [(monthlyPayment * loanTermMonths - loanAmount), totalInterest],
-                        backgroundColor: ['#007bff', '#28a745']
-                    }]
+                    labels: originalAmortization.map(a => a.month),
+                    datasets: [
+                        {
+                            label: 'Original Balance',
+                            data: originalAmortization.map(a => a.balance),
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            fill: false
+                        },
+                        {
+                            label: 'New Balance',
+                            data: newAmortization.map(a => a.balance),
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            fill: false
+                        }
+                    ]
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Month'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Balance ($)'
+                            }
+                        }
+                    }
                 }
             });
         }
@@ -236,20 +279,19 @@
         function handleEmailSignup() {
             const email = document.getElementById('email').value;
             if (email) {
-                alert(`Thank you for subscribing with ${email}!`);
+                alert('Thank you for subscribing!');
+                // Add email handling logic here
             } else {
                 alert('Please enter a valid email address.');
             }
         }
 
-        function sharePage() {
+        function shareTool() {
             const url = window.location.href;
-            const text = "Check out this Mortgage Payoff Calculator!";
-            const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
             navigator.clipboard.writeText(url).then(() => {
                 alert('URL copied to clipboard!');
             });
-            window.open(twitterUrl, '_blank');
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Mortgage Payoff Calculator!`, '_blank');
         }
     </script>
 </body>

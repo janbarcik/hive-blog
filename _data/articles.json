@@ -1,5 +1,45 @@
 [
   {
+    "title": "Herman Miller Aeron vs Steelcase Leap: The Ultimate Ergonomic Chair Showdown",
+    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-the-ultimate-ergonomic-chair-showdown/",
+    "slug": "herman-miller-aeron-vs-steelcase-leap-the-ultimate-ergonomic-chair-showdown",
+    "meta_description": "Discover the ultimate ergonomic chair showdown: Herman Miller Aeron vs Steelcase Leap. Uncover features, comfort, and value for your workspace!",
+    "worker": "Worker-2",
+    "published_at": "2026-03-08T14:33:37.388924",
+    "format": "comparator",
+    "niche": "ergonomic office chairs"
+  },
+  {
+    "title": "The Ultimate Guide to the Best Smart Thermostat Reviews",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-guide-to-the-best-smart-thermostat-reviews/",
+    "slug": "the-ultimate-guide-to-the-best-smart-thermostat-reviews",
+    "meta_description": "Discover the ultimate guide featuring the best smart thermostat reviews to help you choose the perfect smart home device for comfort and energy savings!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-08T14:34:05.805110",
+    "format": "reviewer",
+    "niche": "smart thermostats"
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-08T14:32:34.797309",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-08T14:32:52.165498",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
     "title": "Daily Crypto Signals — March 08",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-08/",
     "slug": "crypto-signals-2026-03-08",
@@ -38,26 +78,6 @@
     "published_at": "2026-03-08T12:37:44.190723",
     "format": "guide",
     "niche": "compact espresso machines"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T12:36:54.643114",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T12:37:08.738154",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 10 Best Electric Toothbrush Reviews for a Sparkling Clean Smile",
