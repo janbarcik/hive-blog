@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debt Snowball Planner | Optimize Your Debt Payoff</title>
     <meta name="description" content="Use our Debt Snowball Planner to enter all your debts and get an optimized payoff roadmap.">
-    <meta property="og:title" content="Debt Snowball Planner">
-    <meta property="og:description" content="Enter all your debts and get an optimized payoff roadmap.">
+    <meta property="og:title" content="Debt Snowball Planner | Optimize Your Debt Payoff">
+    <meta property="og:description" content="Use our Debt Snowball Planner to enter all your debts and get an optimized payoff roadmap.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com/debt-snowball-planner">
-    <meta property="og:image" content="https://yourwebsite.com/image.jpg">
+    <meta property="og:image" content="https://yourwebsite.com/images/debt-snowball.jpg">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -26,40 +26,24 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
             background-color: #f4f4f9;
             color: #333;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3, h4 {
-            color: #333;
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
         }
         .ad-slot {
             margin: 20px 0;
             text-align: center;
-        }
-        .affiliate-box {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
-        .affiliate-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .affiliate-btn:hover {
-            background-color: #0056b3;
         }
         .form-group {
             margin-bottom: 15px;
@@ -74,75 +58,58 @@
             box-sizing: border-box;
         }
         button {
-            padding: 10px 15px;
-            background-color: #28a745;
+            background: #28a745;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            padding: 10px 15px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #218838;
+            background: #218838;
         }
         .results {
             margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
         }
-        .results table {
-            width: 100%;
-            border-collapse: collapse;
+        .affiliate-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 5px;
         }
-        .results th, .results td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+        .affiliate-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        .results th {
-            background-color: #f2f2f2;
+        .affiliate-btn:hover {
+            background: #0056b3;
         }
         .email-capture {
             margin-top: 20px;
-            padding: 10px;
-            background-color: #e9ecef;
+            padding: 15px;
+            background: #f8f9fa;
             border-radius: 5px;
         }
-        .email-capture input[type="email"] {
-            width: calc(100% - 120px);
-            padding: 8px;
-            margin-right: 10px;
-            box-sizing: border-box;
-        }
-        .email-capture button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .email-capture button:hover {
-            background-color: #0056b3;
-        }
-        .share-btn {
+        .share-buttons {
             margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #1da1f2;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
         }
-        .share-btn:hover {
-            background-color: #0d95e8;
+        .nav {
+            margin-top: 20px;
+            text-align: center;
         }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
+        .nav a {
+            margin: 0 10px;
             color: #007bff;
+            text-decoration: none;
         }
-        nav a:hover {
+        .nav a:hover {
             text-decoration: underline;
         }
         @media (prefers-color-scheme: dark) {
@@ -150,40 +117,41 @@
                 background-color: #121212;
                 color: #e0e0e0;
             }
-            .container {
-                background-color: #1e1e1e;
+            header {
+                background: #1e1e1e;
             }
-            .affiliate-box {
-                background-color: #2e2e2e;
-                border-color: #444;
+            .results, .affiliate-box, .email-capture {
+                background: #1e1e1e;
+                color: #e0e0e0;
             }
-            .results th {
-                background-color: #333;
+            .affiliate-btn {
+                background: #0056b3;
+            }
+            .affiliate-btn:hover {
+                background: #003d7a;
             }
         }
         @media print {
-            .ad-slot, .affiliate-box, .email-capture, .share-btn, nav {
+            .ad-slot, .affiliate-box, .email-capture, .share-buttons, .nav {
                 display: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="/">Home</a>
-            <a href="/tools/">Tools Directory</a>
-        </nav>
+    <header>
         <h1>Debt Snowball Planner</h1>
+    </header>
+    <div class="container">
         <div class="ad-slot"><!-- AdSense code here --></div>
         <form id="debtForm">
             <div class="form-group">
                 <label for="debtList">Debts (name/balance/rate/minimum):</label>
-                <input type="text" id="debtList" placeholder="e.g., Credit Card/5000/15.99/100">
+                <textarea id="debtList" rows="5" placeholder="e.g., Credit Card/5000/18.99/100"></textarea>
             </div>
             <div class="form-group">
                 <label for="extraPayment">Extra Monthly Payment:</label>
-                <input type="number" id="extraPayment" min="0" step="0.01" placeholder="e.g., 200">
+                <input type="number" id="extraPayment" placeholder="e.g., 200">
             </div>
             <div class="form-group">
                 <label for="method">Method:</label>
@@ -194,7 +162,13 @@
             </div>
             <button type="button" onclick="calculatePayoff()">Calculate</button>
         </form>
-        <div class="results" id="results"></div>
+        <div class="results" id="results" style="display: none;">
+            <h2>Payoff Plan</h2>
+            <div id="payoffOrder"></div>
+            <div id="timeline"></div>
+            <div id="totalInterestSaved"></div>
+            <div id="monthlySchedule"></div>
+        </div>
         <div class="affiliate-box">
             <h4>💡 Recommended</h4>
             <p>Best 0% APR balance transfer cards [affiliate link]</p>
@@ -204,24 +178,29 @@
         <div class="email-capture">
             <h4>Get weekly free tools</h4>
             <input type="email" id="email" placeholder="Enter your email">
-            <button onclick="handleEmailSignup()">Subscribe</button>
+            <button type="button" onclick="handleEmailSignup()">Subscribe</button>
         </div>
-        <a href="#" class="share-btn" onclick="shareTool()">Share this tool</a>
+        <div class="share-buttons">
+            <button onclick="shareTool()">Share this tool</button>
+        </div>
+        <div class="nav">
+            <a href="/tools/">Tools Directory</a>
+            <a href="/">Home</a>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         function calculatePayoff() {
-            const debtInput = document.getElementById('debtList').value;
-            const extraPayment = parseFloat(document.getElementById('extraPayment').value) || 0;
+            const debtList = document.getElementById('debtList').value.trim();
+            const extraPayment = parseFloat(document.getElementById('extraPayment').value);
             const method = document.getElementById('method').value;
-            const resultsDiv = document.getElementById('results');
-
-            if (!debtInput) {
-                alert('Please enter your debts.');
+            
+            if (!debtList || isNaN(extraPayment)) {
+                alert('Please enter valid debts and extra payment.');
                 return;
             }
-
-            const debts = debtInput.split(',').map(debt => {
+            
+            const debts = debtList.split('\n').map(debt => {
                 const [name, balance, rate, minimum] = debt.split('/');
                 return {
                     name: name.trim(),
@@ -232,13 +211,14 @@
             });
 
             if (debts.some(debt => isNaN(debt.balance) || isNaN(debt.rate) || isNaN(debt.minimum))) {
-                alert('Please enter valid numbers for balance, rate, and minimum.');
+                alert('Please enter valid debt details.');
                 return;
             }
 
             debts.sort((a, b) => method === 'snowball' ? a.balance - b.balance : b.rate - a.rate);
 
             let totalInterestSaved = 0;
+            let timeline = [];
             let monthlySchedule = [];
             let month = 0;
 
@@ -259,46 +239,29 @@
                         month,
                         name: debt.name,
                         payment: payment.toFixed(2),
-                        remainingBalance: debt.balance.toFixed(2)
+                        balance: debt.balance.toFixed(2)
                     });
 
                     if (monthlyPayment <= 0) break;
                 }
+
+                timeline.push({
+                    month,
+                    debts: debts.map(debt => ({ name: debt.name, balance: debt.balance.toFixed(2) }))
+                });
             }
 
-            resultsDiv.innerHTML = `
-                <h3>Payoff Order & Timeline</h3>
-                <ul>${debts.map(debt => `<li>${debt.name}</li>`).join('')}</ul>
-                <h3>Total Interest Saved</h3>
-                <p>$${totalInterestSaved.toFixed(2)}</p>
-                <h3>Monthly Schedule</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Month</th>
-                            <th>Debt</th>
-                            <th>Payment</th>
-                            <th>Remaining Balance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${monthlySchedule.map(schedule => `
-                            <tr>
-                                <td>${schedule.month}</td>
-                                <td>${schedule.name}</td>
-                                <td>$${schedule.payment}</td>
-                                <td>$${schedule.remainingBalance}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
+            document.getElementById('payoffOrder').innerHTML = `<strong>Payoff Order:</strong> ${debts.map(debt => debt.name).join(', ')}`;
+            document.getElementById('timeline').innerHTML = `<strong>Timeline:</strong> ${timeline.length} months`;
+            document.getElementById('totalInterestSaved').innerHTML = `<strong>Total Interest Saved:</strong> $${totalInterestSaved.toFixed(2)}`;
+            document.getElementById('monthlySchedule').innerHTML = `<strong>Monthly Schedule:</strong> <pre>${JSON.stringify(monthlySchedule, null, 2)}</pre>`;
+            document.getElementById('results').style.display = 'block';
         }
 
         function handleEmailSignup() {
-            const email = document.getElementById('email').value;
+            const email = document.getElementById('email').value.trim();
             if (!email) {
-                alert('Please enter your email.');
+                alert('Please enter a valid email address.');
                 return;
             }
             alert('Thank you for subscribing!');
@@ -306,12 +269,10 @@
 
         function shareTool() {
             const url = window.location.href;
-            const text = "Check out this Debt Snowball Planner!";
-            const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
             navigator.clipboard.writeText(url).then(() => {
                 alert('URL copied to clipboard!');
-                window.open(twitterUrl, '_blank');
             });
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Debt Snowball Planner!`, '_blank');
         }
     </script>
 </body>

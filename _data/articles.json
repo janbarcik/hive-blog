@@ -1,5 +1,29 @@
 [
   {
+    "title": "Debt Snowball Planner",
+    "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
+    "slug": "tools/debt-snowball-planner",
+    "meta_description": "Enter all your debts and get an optimized payoff roadmap",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-08T03:48:09.995530"
+  },
+  {
+    "title": "Retirement Savings Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
+    "slug": "tools/retirement-savings-calculator",
+    "meta_description": "Find out exactly how much you need to retire at your target age",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-08T03:47:55.020389"
+  },
+  {
+    "title": "Top 10 Smart Light Bulb Reviews: Illuminate Your Home with Smart Technology",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-smart-light-bulb-reviews-illuminate-your-home-with-smart-technology/",
+    "slug": "top-10-smart-light-bulb-reviews-illuminate-your-home-with-smart-technology",
+    "meta_description": "Discover the best smart light bulb reviews and transform your home with cutting-edge lighting technology. Brighten your space with style and efficiency!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-08T03:49:18.368216"
+  },
+  {
     "title": "Daily Crypto Signals \u2014 March 08",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-08/",
     "slug": "crypto-signals-2026-03-08",
@@ -54,22 +78,6 @@
     "meta_description": "Discover comfort and support in our ultimate buyers guide to the best ergonomic office chairs. Enhance your workspace with top-rated options!",
     "worker": "Worker-3",
     "published_at": "2026-03-08T03:00:03.287895"
-  },
-  {
-    "title": "Debt Snowball Planner",
-    "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
-    "slug": "tools/debt-snowball-planner",
-    "meta_description": "Enter all your debts and get an optimized payoff roadmap",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T02:59:35.129974"
-  },
-  {
-    "title": "Retirement Savings Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
-    "slug": "tools/retirement-savings-calculator",
-    "meta_description": "Find out exactly how much you need to retire at your target age",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T02:59:18.948686"
   },
   {
     "title": "Top 10 Best Robotic Vacuum Cleaner Reviews",
