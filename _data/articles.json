@@ -1,5 +1,85 @@
 [
   {
+    "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Chair is Best for You?",
+    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-which-ergonomic-chair-is-best-for-you/",
+    "slug": "herman-miller-aeron-vs-steelcase-leap-which-ergonomic-chair-is-best-for-you",
+    "meta_description": "Discover the ultimate ergonomic showdown: Herman Miller Aeron vs Steelcase Leap. Uncover which chair offers superior comfort and support for your needs!",
+    "worker": "Worker-2",
+    "published_at": "2026-03-08T15:14:09.195711",
+    "format": "comparator",
+    "niche": "ergonomic office chairs"
+  },
+  {
+    "title": "Quip vs Oral-B: Which Electric Toothbrush is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/quip-vs-oral-b-which-electric-toothbrush-is-right-for-you/",
+    "slug": "quip-vs-oral-b-which-electric-toothbrush-is-right-for-you",
+    "meta_description": "Discover the ultimate showdown in our Quip vs Oral-B comparison! Find out which electric toothbrush is perfect for your dental care needs today.",
+    "worker": "Worker-6",
+    "published_at": "2026-03-08T15:16:56.106796",
+    "format": "comparator",
+    "niche": "electric toothbrushes"
+  },
+  {
+    "title": "The Ultimate Compact Espresso Machines Buyers Guide",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-compact-espresso-machines-buyers-guide/",
+    "slug": "the-ultimate-compact-espresso-machines-buyers-guide",
+    "meta_description": "Discover the essential compact espresso machines buyers guide to help you find the perfect brew. Elevate your coffee experience today!",
+    "worker": "Worker-3",
+    "published_at": "2026-03-08T15:14:22.624676",
+    "format": "guide",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "The Ultimate Guide to the Best Wireless Earbuds of 2023",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-guide-to-the-best-wireless-earbuds-of-2023/",
+    "slug": "the-ultimate-guide-to-the-best-wireless-earbuds-of-2023",
+    "meta_description": "Discover the top wireless earbuds of 2023 in our ultimate guide! Read expert reviews and find your perfect sound companion today. Best wireless earbuds rev",
+    "worker": "Worker-5",
+    "published_at": "2026-03-08T15:15:54.293085",
+    "format": "reviewer",
+    "niche": "wireless earbuds"
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-08T15:13:35.949742",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-08T15:13:50.661663",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top Electric Toothbrush Reviews: Finding the Perfect Smile Companion",
+    "url": "https://janbarcik.github.io/hive-blog/top-electric-toothbrush-reviews-finding-the-perfect-smile-companion/",
+    "slug": "top-electric-toothbrush-reviews-finding-the-perfect-smile-companion",
+    "meta_description": "Discover the best electric toothbrush reviews to find your perfect smile companion! Enhance your oral care routine and achieve a dazzling smile today!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-08T15:14:45.723752",
+    "format": "reviewer",
+    "niche": "electric toothbrushes"
+  },
+  {
+    "title": "Top Robotic Vacuum Cleaners Under $50 for Budget-Savvy Shoppers",
+    "url": "https://janbarcik.github.io/hive-blog/top-robotic-vacuum-cleaners-under-50-for-budget-savvy-shoppers/",
+    "slug": "top-robotic-vacuum-cleaners-under-50-for-budget-savvy-shoppers",
+    "meta_description": "Discover the best robotic vacuum cleaners under $50! Get efficient cleaning without breaking the bank. Perfect for budget-savvy shoppers on a budget!",
+    "worker": "Worker-4",
+    "published_at": "2026-03-08T15:15:29.209091",
+    "format": "bargain",
+    "niche": "robotic vacuum cleaners"
+  },
+  {
     "title": "Daily Crypto Signals — March 08",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-08/",
     "slug": "crypto-signals-2026-03-08",
@@ -30,26 +110,6 @@
     "niche": "smart thermostats"
   },
   {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T14:32:34.797309",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T14:32:52.165498",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
     "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Chair is Right for You?",
     "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-which-ergonomic-chair-is-right-for-you/",
     "slug": "herman-miller-aeron-vs-steelcase-leap-which-ergonomic-chair-is-right-for-you",
@@ -68,16 +128,6 @@
     "published_at": "2026-03-08T12:40:43.873065",
     "format": "comparator",
     "niche": "electric toothbrushes"
-  },
-  {
-    "title": "The Ultimate Compact Espresso Machines Buyers Guide",
-    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-compact-espresso-machines-buyers-guide/",
-    "slug": "the-ultimate-compact-espresso-machines-buyers-guide",
-    "meta_description": "Discover the perfect brew with our compact espresso machines buyers guide! Uncover top picks, features, and tips to elevate your coffee experience.",
-    "worker": "Worker-3",
-    "published_at": "2026-03-08T12:37:44.190723",
-    "format": "guide",
-    "niche": "compact espresso machines"
   },
   {
     "title": "Top 10 Best Electric Toothbrush Reviews for a Sparkling Clean Smile",

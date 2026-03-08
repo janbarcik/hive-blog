@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compound Interest Calculator | Investment Growth Calculator</title>
+    <title>Compound Interest Calculator - Investment Growth Calculator</title>
     <meta name="description" content="Visualize exactly how your money grows with compound interest over time using our Compound Interest Calculator.">
     <meta property="og:title" content="Compound Interest Calculator">
     <meta property="og:description" content="Visualize exactly how your money grows with compound interest over time.">
@@ -11,41 +11,34 @@
     <meta property="og:url" content="https://yourwebsite.com/compound-interest-calculator">
     <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Compound Interest Calculator",
-      "description": "Visualize exactly how your money grows with compound interest over time.",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "url": "https://yourwebsite.com/compound-interest-calculator"
-    }
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             line-height: 1.6;
-            background-color: #f4f4f9;
             color: #333;
+            background-color: #f4f4f9;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
             background: #fff;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3, h4 {
-            margin-bottom: 10px;
         }
         input, select, button {
             width: 100%;
             padding: 10px;
-            margin: 5px 0 20px;
+            margin: 10px 0;
             border-radius: 5px;
             border: 1px solid #ddd;
         }
@@ -58,119 +51,139 @@
         button:hover {
             background-color: #0056b3;
         }
-        .results, .affiliate-box {
+        .results {
             margin-top: 20px;
+            background: #fff;
             padding: 20px;
             border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-        .ad-slot {
-            margin: 20px 0;
-            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .affiliate-box {
+            margin-top: 20px;
+            padding: 15px;
             background-color: #e9f7ef;
-            border: 1px solid #d4edda;
+            border-left: 4px solid #28a745;
         }
         .affiliate-btn {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px 20px;
+            padding: 10px 15px;
             background-color: #28a745;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
         }
-        .affiliate-btn:hover {
-            background-color: #218838;
+        .ad-slot {
+            margin: 20px 0;
+            text-align: center;
         }
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+        .email-capture {
+            margin-top: 20px;
+            text-align: center;
         }
-        .nav a {
-            text-decoration: none;
-            color: #007bff;
+        .email-capture input {
+            width: 70%;
+            display: inline-block;
         }
-        .nav a:hover {
-            text-decoration: underline;
+        .email-capture button {
+            width: 25%;
+            display: inline-block;
         }
         .share-btn {
-            display: inline-block;
             margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #17a2b8;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
+            text-align: center;
         }
-        .share-btn:hover {
-            background-color: #138496;
+        .share-btn button {
+            background-color: #1da1f2;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .share-btn button:hover {
+            background-color: #0d95e8;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
         }
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #121212;
                 color: #e0e0e0;
             }
-            .container, .results, .affiliate-box {
+            form, .results, .affiliate-box {
                 background-color: #1e1e1e;
-                border-color: #333;
+                color: #e0e0e0;
             }
             input, select, button {
                 background-color: #333;
                 color: #e0e0e0;
-                border-color: #444;
+                border: 1px solid #555;
             }
             button {
-                background-color: #0056b3;
+                background-color: #007bff;
             }
             button:hover {
-                background-color: #003d7a;
+                background-color: #0056b3;
             }
             .affiliate-box {
-                background-color: #2e3b2e;
-                border-color: #3a4a3a;
+                background-color: #2e7d32;
             }
             .affiliate-btn {
-                background-color: #218838;
+                background-color: #388e3c;
             }
-            .affiliate-btn:hover {
-                background-color: #1e7e34;
-            }
-            .share-btn {
-                background-color: #138496;
-            }
-            .share-btn:hover {
-                background-color: #0f6c74;
+        }
+        @media print {
+            nav, .ad-slot, .affiliate-box, .email-capture, .share-btn {
+                display: none;
             }
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Compound Interest Calculator",
+      "description": "Visualize exactly how your money grows with compound interest over time.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "url": "https://yourwebsite.com/compound-interest-calculator"
+    }
+    </script>
 </head>
 <body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/tools/">Tools Directory</a>
+    </nav>
     <div class="container">
-        <div class="nav">
-            <a href="/">Home</a>
-            <a href="/tools/">Tools Directory</a>
-        </div>
         <h1>Compound Interest Calculator</h1>
         <div class="ad-slot"><!-- AdSense code here --></div>
         <form id="calculator-form">
             <label for="principal">Principal Amount ($):</label>
-            <input type="number" id="principal" required>
+            <input type="number" id="principal" required min="0" step="0.01">
             <label for="annual_rate_pct">Annual Interest Rate (%):</label>
-            <input type="number" id="annual_rate_pct" step="0.01" required>
+            <input type="number" id="annual_rate_pct" required min="0" step="0.01">
             <label for="years">Number of Years:</label>
-            <input type="number" id="years" required>
+            <input type="number" id="years" required min="1">
             <label for="compound_frequency">Compound Frequency:</label>
-            <select id="compound_frequency">
+            <select id="compound_frequency" required>
                 <option value="1">Annually</option>
                 <option value="4">Quarterly</option>
                 <option value="12">Monthly</option>
                 <option value="365">Daily</option>
             </select>
             <label for="monthly_contribution">Monthly Contribution ($):</label>
-            <input type="number" id="monthly_contribution" required>
+            <input type="number" id="monthly_contribution" required min="0" step="0.01">
             <button type="button" onclick="calculateCompoundInterest()">Calculate</button>
         </form>
         <div class="results" id="results" style="display:none;">
@@ -178,7 +191,17 @@
             <p id="final-amount"></p>
             <p id="total-interest"></p>
             <canvas id="growth-chart" width="400" height="200"></canvas>
-            <div id="comparison-table"></div>
+            <table id="comparison-table" border="1" style="width:100%; margin-top:20px;">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Starting Balance</th>
+                        <th>Interest Earned</th>
+                        <th>Ending Balance</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
         <div class="affiliate-box">
             <h4>💡 Recommended</h4>
@@ -186,55 +209,56 @@
             <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
             <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
         </div>
-        <form id="email-signup" onsubmit="handleEmailSignup(event)">
+        <div class="email-capture">
             <h3>Get weekly free tools</h3>
-            <input type="email" placeholder="Your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <a href="#" class="share-btn" onclick="shareTool()">Share this tool</a>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="button" onclick="handleEmailSignup()">Subscribe</button>
+        </div>
+        <div class="share-btn">
+            <button onclick="sharePage()">Share this tool</button>
+        </div>
     </div>
     <script>
         function calculateCompoundInterest() {
             const principal = parseFloat(document.getElementById('principal').value);
-            const annualRatePct = parseFloat(document.getElementById('annual_rate_pct').value);
+            const annualRate = parseFloat(document.getElementById('annual_rate_pct').value) / 100;
             const years = parseInt(document.getElementById('years').value);
             const compoundFrequency = parseInt(document.getElementById('compound_frequency').value);
             const monthlyContribution = parseFloat(document.getElementById('monthly_contribution').value);
 
-            if (isNaN(principal) || isNaN(annualRatePct) || isNaN(years) || isNaN(monthlyContribution)) {
-                alert('Please fill in all fields with valid numbers.');
+            if (isNaN(principal) || isNaN(annualRate) || isNaN(years) || isNaN(compoundFrequency) || isNaN(monthlyContribution)) {
+                alert('Please enter valid numbers for all fields.');
                 return;
             }
 
-            const annualRate = annualRatePct / 100;
-            const n = compoundFrequency;
-            const totalMonths = years * 12;
-            let finalAmount = principal;
+            let totalAmount = principal;
             let totalInterest = 0;
-            const yearlyData = [];
+            const yearData = [];
+            const monthlyRate = annualRate / 12;
+            const compoundingPeriods = years * compoundFrequency;
 
-            for (let month = 1; month <= totalMonths; month++) {
-                finalAmount += monthlyContribution;
-                const interest = finalAmount * (annualRate / n);
-                finalAmount += interest;
-                totalInterest += interest;
-
-                if (month % 12 === 0) {
-                    yearlyData.push({ year: month / 12, amount: finalAmount });
+            for (let i = 1; i <= years; i++) {
+                const startingBalance = totalAmount;
+                for (let j = 0; j < compoundFrequency; j++) {
+                    totalAmount += monthlyContribution * (compoundFrequency / 12);
+                    totalAmount *= (1 + annualRate / compoundFrequency);
                 }
+                const interestEarned = totalAmount - startingBalance - (monthlyContribution * 12);
+                totalInterest += interestEarned;
+                yearData.push({ year: i, startingBalance: startingBalance.toFixed(2), interestEarned: interestEarned.toFixed(2), endingBalance: totalAmount.toFixed(2) });
             }
 
-            document.getElementById('final-amount').textContent = `Final Amount: $${finalAmount.toFixed(2)}`;
-            document.getElementById('total-interest').textContent = `Total Interest Earned: $${totalInterest.toFixed(2)}`;
+            document.getElementById('final-amount').innerText = `Final Amount: $${totalAmount.toFixed(2)}`;
+            document.getElementById('total-interest').innerText = `Total Interest Earned: $${totalInterest.toFixed(2)}`;
 
             const ctx = document.getElementById('growth-chart').getContext('2d');
             new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: yearlyData.map(data => `Year ${data.year}`),
+                    labels: yearData.map(data => `Year ${data.year}`),
                     datasets: [{
-                        label: 'Investment Growth',
-                        data: yearlyData.map(data => data.amount),
+                        label: 'Ending Balance',
+                        data: yearData.map(data => data.endingBalance),
                         borderColor: 'rgba(75, 192, 192, 1)',
                         borderWidth: 2,
                         fill: false
@@ -246,27 +270,36 @@
                 }
             });
 
-            let comparisonTable = '<table><tr><th>Year</th><th>Amount</th></tr>';
-            yearlyData.forEach(data => {
-                comparisonTable += `<tr><td>${data.year}</td><td>$${data.amount.toFixed(2)}</td></tr>`;
+            const tableBody = document.getElementById('comparison-table').querySelector('tbody');
+            tableBody.innerHTML = '';
+            yearData.forEach(data => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = data.year;
+                row.insertCell(1).innerText = `$${data.startingBalance}`;
+                row.insertCell(2).innerText = `$${data.interestEarned}`;
+                row.insertCell(3).innerText = `$${data.endingBalance}`;
             });
-            comparisonTable += '</table>';
-            document.getElementById('comparison-table').innerHTML = comparisonTable;
 
             document.getElementById('results').style.display = 'block';
         }
 
-        function handleEmailSignup(event) {
-            event.preventDefault();
-            alert('Thank you for subscribing!');
+        function handleEmailSignup() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                alert(`Thank you for subscribing with ${email}!`);
+                document.getElementById('email').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
         }
 
-        function shareTool() {
+        function sharePage() {
             const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
                 alert('URL copied to clipboard!');
             });
-            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Compound Interest Calculator!`, '_blank');
+            const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Compound Interest Calculator!`;
+            window.open(twitterUrl, '_blank');
         }
     </script>
 </body>
