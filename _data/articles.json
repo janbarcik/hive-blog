@@ -1,5 +1,85 @@
 [
   {
+    "title": "August Smart Lock vs Schlage Encode: Which is the Better Choice for Your Home?",
+    "url": "https://janbarcik.github.io/hive-blog/august-smart-lock-vs-schlage-encode-which-is-the-better-choice-for-your-home/",
+    "slug": "august-smart-lock-vs-schlage-encode-which-is-the-better-choice-for-your-home",
+    "meta_description": "Discover which is the better choice for your home in our comparison of August Smart Lock vs Schlage Encode. Explore features, security, and convenience!",
+    "worker": "Worker-6",
+    "published_at": "2026-03-09T02:31:23.365509",
+    "format": "comparator",
+    "niche": "smart locks"
+  },
+  {
+    "title": "Herman Miller Aeron vs Steelcase Leap: Battle of the Ergonomic Office Chairs",
+    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-battle-of-the-ergonomic-office-chairs/",
+    "slug": "herman-miller-aeron-vs-steelcase-leap-battle-of-the-ergonomic-office-chairs",
+    "meta_description": "Discover the ultimate showdown in ergonomic seating! Explore our in-depth comparison of the Herman Miller Aeron vs Steelcase Leap and find your perfect cha",
+    "worker": "Worker-2",
+    "published_at": "2026-03-09T02:29:00.647499",
+    "format": "comparator",
+    "niche": "ergonomic office chairs"
+  },
+  {
+    "title": "The Ultimate Guide to Choosing the Best Compact Espresso Machines",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-guide-to-choosing-the-best-compact-espresso-machines/",
+    "slug": "the-ultimate-guide-to-choosing-the-best-compact-espresso-machines",
+    "meta_description": "Discover the best compact espresso machines with our comprehensive buyers guide. Unlock expert tips to brew barista-quality coffee at home!",
+    "worker": "Worker-3",
+    "published_at": "2026-03-09T02:28:58.650938",
+    "format": "guide",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "The Ultimate Guide to the Best Noise Cancelling Earbuds: In-Depth Reviews",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-guide-to-the-best-noise-cancelling-earbuds-in-depth-reviews/",
+    "slug": "the-ultimate-guide-to-the-best-noise-cancelling-earbuds-in-depth-reviews",
+    "meta_description": "Discover the ultimate guide to the best noise cancelling earbuds with in-depth reviews. Find your perfect match for immersive sound and tranquility!",
+    "worker": "Worker-5",
+    "published_at": "2026-03-09T02:30:38.643208",
+    "format": "reviewer",
+    "niche": "wireless earbuds"
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-09T02:28:17.012517",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-09T02:28:37.845752",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top 5 Robotic Vacuum Cleaners Under $50: Affordable Cleaning Solutions",
+    "url": "https://janbarcik.github.io/hive-blog/top-5-robotic-vacuum-cleaners-under-50-affordable-cleaning-solutions/",
+    "slug": "top-5-robotic-vacuum-cleaners-under-50-affordable-cleaning-solutions",
+    "meta_description": "Discover the top 5 robotic vacuum cleaners under $50! Affordable, efficient, and perfect for effortless cleaning. Upgrade your home with smart solutions!",
+    "worker": "Worker-4",
+    "published_at": "2026-03-09T02:30:21.957720",
+    "format": "bargain",
+    "niche": "robotic vacuum cleaners"
+  },
+  {
+    "title": "Top Smart Locks of 2023: Comprehensive Reviews and Buying Guide",
+    "url": "https://janbarcik.github.io/hive-blog/top-smart-locks-of-2023-comprehensive-reviews-and-buying-guide/",
+    "slug": "top-smart-locks-of-2023-comprehensive-reviews-and-buying-guide",
+    "meta_description": "Discover the best smart lock reviews of 2023! Explore our comprehensive buying guide to find the perfect smart lock for your home security needs.",
+    "worker": "Worker-1",
+    "published_at": "2026-03-09T02:29:36.316608",
+    "format": "reviewer",
+    "niche": "smart locks"
+  },
+  {
     "title": "Daily Crypto Signals — March 09",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-09/",
     "slug": "crypto-signals-2026-03-09",
@@ -28,36 +108,6 @@
     "published_at": "2026-03-08T21:27:55.135690",
     "format": "comparator",
     "niche": "robotic vacuum cleaners"
-  },
-  {
-    "title": "The Ultimate Guide to Choosing the Best Compact Espresso Machines",
-    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-guide-to-choosing-the-best-compact-espresso-machines/",
-    "slug": "the-ultimate-guide-to-choosing-the-best-compact-espresso-machines",
-    "meta_description": "Discover the best compact espresso machines with our ultimate buyers guide. Make informed choices and enjoy barista-quality coffee at home!",
-    "worker": "Worker-3",
-    "published_at": "2026-03-08T21:25:44.733426",
-    "format": "guide",
-    "niche": "compact espresso machines"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T21:25:13.278599",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-08T21:25:29.038656",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 10 Best Wireless Earbuds Reviews 2023",
