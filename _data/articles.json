@@ -1,5 +1,35 @@
 [
   {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-09T22:54:12.063714",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-09T22:54:29.970876",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top Robotic Vacuum Cleaners Reviewed: Which Model is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/top-robotic-vacuum-cleaners-reviewed-which-model-is-right-for-you/",
+    "slug": "top-robotic-vacuum-cleaners-reviewed-which-model-is-right-for-you",
+    "meta_description": "Discover the best robotic vacuum cleaner reviews to find the perfect model for your home. Compare features, performance, and price for a smarter clean!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-09T22:55:41.296160",
+    "format": "reviewer",
+    "niche": "robotic vacuum cleaners"
+  },
+  {
     "title": "Daily Crypto Signals — March 09",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-09/",
     "slug": "crypto-signals-2026-03-09",
@@ -128,26 +158,6 @@
     "published_at": "2026-03-09T07:07:49.549368",
     "format": "guide",
     "niche": "compact espresso machines"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T07:06:47.624883",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T07:07:08.690898",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 10 Best Portable Car Jump Starters: Expert Reviews and Comparisons",

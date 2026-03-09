@@ -1573,4 +1573,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://janbarcik.github.io/hive-blog/top-robotic-vacuum-cleaners-reviewed-which-model-is-right-for-you/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
