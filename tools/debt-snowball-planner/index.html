@@ -3,92 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debt Snowball Planner | Optimize Your Debt Payoff</title>
+    <title>Debt Snowball Planner | Optimize Your Payoff Strategy</title>
     <meta name="description" content="Use our Debt Snowball Planner to enter your debts and get an optimized payoff roadmap.">
-    <meta property="og:title" content="Debt Snowball Planner">
-    <meta property="og:description" content="Enter your debts and get an optimized payoff roadmap.">
+    <meta property="og:title" content="Debt Snowball Planner | Optimize Your Payoff Strategy">
+    <meta property="og:description" content="Use our Debt Snowball Planner to enter your debts and get an optimized payoff roadmap.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com/debt-snowball-planner">
-    <meta property="og:image" content="https://yourwebsite.com/images/debt-snowball.png">
+    <meta property="og:image" content="https://yourwebsite.com/images/debt-snowball-planner.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            line-height: 1.6;
             background-color: #f4f4f9;
             color: #333;
         }
-        header, footer {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-        }
         .container {
             max-width: 800px;
-            width: 100%;
+            margin: 20px auto;
             padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #333;
         }
         .ad-slot {
             margin: 20px 0;
             text-align: center;
         }
         .affiliate-box {
-            background-color: #e7f3ff;
-            padding: 15px;
-            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px;
             margin-top: 20px;
+            background-color: #f9f9f9;
         }
         .affiliate-btn {
             display: inline-block;
             margin-top: 10px;
             padding: 10px 15px;
             background-color: #007bff;
-            color: white;
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        input, select, button {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
+        .affiliate-btn:hover {
             background-color: #0056b3;
         }
-        .results {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f9;
         }
         @media (prefers-color-scheme: dark) {
             body {
-                background-color: #121212;
-                color: #e0e0e0;
+                background-color: #333;
+                color: #f4f4f9;
             }
-            .results {
-                background-color: #1e1e1e;
+            .container {
+                background-color: #444;
             }
             .affiliate-box {
-                background-color: #2a2a2a;
+                background-color: #555;
+            }
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .share-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .share-btn:hover {
+            background-color: #218838;
+        }
+        .email-signup {
+            margin-top: 20px;
+        }
+        .email-signup input[type="email"] {
+            padding: 10px;
+            width: calc(100% - 120px);
+            margin-right: 10px;
+        }
+        .email-signup button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .email-signup button:hover {
+            background-color: #0056b3;
+        }
+        @media print {
+            .ad-slot, .affiliate-box, .nav, .share-btn, .email-signup {
+                display: none;
             }
         }
     </style>
@@ -97,151 +125,134 @@
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Debt Snowball Planner",
-      "description": "Enter your debts and get an optimized payoff roadmap.",
+      "description": "Enter your debts to get an optimized payoff roadmap.",
       "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
+      "operatingSystem": "All",
       "url": "https://yourwebsite.com/debt-snowball-planner"
     }
     </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" style="color: white; text-decoration: none; margin-right: 15px;">Home</a>
-            <a href="/tools/" style="color: white; text-decoration: none;">Tools</a>
-        </nav>
-    </header>
     <div class="container">
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/tools/">Tools Directory</a>
+        </div>
         <h1>Debt Snowball Planner</h1>
         <div class="ad-slot"><!-- AdSense code here --></div>
-        <form id="debtForm">
-            <div>
-                <label for="debtList">Enter your debts (name/balance/rate/minimum):</label>
-                <textarea id="debtList" rows="5" placeholder="e.g., Credit Card/5000/18.99/100" required></textarea>
+        <form id="debt-form">
+            <h2>Enter Your Debts</h2>
+            <div id="debt-list">
+                <div class="debt-item">
+                    <input type="text" placeholder="Name" class="debt-name" required>
+                    <input type="number" placeholder="Balance" class="debt-balance" required>
+                    <input type="number" placeholder="Rate (%)" class="debt-rate" required>
+                    <input type="number" placeholder="Minimum Payment" class="debt-minimum" required>
+                </div>
             </div>
-            <div>
-                <label for="extraPayment">Extra monthly payment:</label>
-                <input type="number" id="extraPayment" min="0" placeholder="e.g., 200" required>
-            </div>
-            <div>
-                <label for="method">Payoff method:</label>
-                <select id="method" required>
-                    <option value="snowball">Snowball</option>
-                    <option value="avalanche">Avalanche</option>
-                </select>
-            </div>
-            <button type="submit">Calculate</button>
+            <button type="button" onclick="addDebt()">Add Another Debt</button>
+            <h2>Extra Monthly Payment</h2>
+            <input type="number" id="extra-payment" placeholder="Extra Monthly Payment" required>
+            <h2>Payoff Method</h2>
+            <select id="method" required>
+                <option value="snowball">Snowball</option>
+                <option value="avalanche">Avalanche</option>
+            </select>
+            <button type="button" onclick="calculatePayoff()">Calculate</button>
         </form>
-        <div class="results" id="results" style="display:none;">
+        <div id="results" style="display:none;">
             <h2>Payoff Plan</h2>
-            <div id="payoffOrder"></div>
+            <div id="payoff-order"></div>
             <div id="timeline"></div>
-            <div id="totalInterestSaved"></div>
-            <div id="monthlySchedule"></div>
-            <div class="affiliate-box">
-                <h4>💡 Recommended</h4>
-                <p>Best 0% APR balance transfer cards [affiliate link]</p>
-                <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
-                <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
-            </div>
+            <div id="total-interest-saved"></div>
+            <table id="schedule-table"></table>
         </div>
-        <div>
-            <button onclick="shareTool()">Share this tool</button>
+        <div class="affiliate-box">
+            <h4>💡 Recommended</h4>
+            <p>Best 0% APR balance transfer cards [affiliate link]</p>
+            <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
+            <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
         </div>
-        <form id="emailSignupForm" onsubmit="handleEmailSignup(event)">
-            <label for="email">Get weekly free tools:</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
+        <a href="#" class="share-btn" onclick="shareTool()">Share this tool</a>
+        <div class="email-signup">
+            <h3>Get weekly free tools</h3>
+            <input type="email" placeholder="Your email" id="email" required>
+            <button onclick="handleEmailSignup()">Subscribe</button>
+        </div>
     </div>
-    <footer>
-        <p>&copy; 2023 Your Website</p>
-    </footer>
     <script>
-        document.getElementById('debtForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const debtList = document.getElementById('debtList').value.trim();
-            const extraPayment = parseFloat(document.getElementById('extraPayment').value);
+        function addDebt() {
+            const debtList = document.getElementById('debt-list');
+            const debtItem = document.createElement('div');
+            debtItem.className = 'debt-item';
+            debtItem.innerHTML = `
+                <input type="text" placeholder="Name" class="debt-name" required>
+                <input type="number" placeholder="Balance" class="debt-balance" required>
+                <input type="number" placeholder="Rate (%)" class="debt-rate" required>
+                <input type="number" placeholder="Minimum Payment" class="debt-minimum" required>
+            `;
+            debtList.appendChild(debtItem);
+        }
+
+        function calculatePayoff() {
+            const debts = [];
+            document.querySelectorAll('.debt-item').forEach(item => {
+                const name = item.querySelector('.debt-name').value;
+                const balance = parseFloat(item.querySelector('.debt-balance').value);
+                const rate = parseFloat(item.querySelector('.debt-rate').value);
+                const minimum = parseFloat(item.querySelector('.debt-minimum').value);
+                if (name && !isNaN(balance) && !isNaN(rate) && !isNaN(minimum)) {
+                    debts.push({ name, balance, rate, minimum });
+                }
+            });
+
+            const extraPayment = parseFloat(document.getElementById('extra-payment').value);
             const method = document.getElementById('method').value;
 
-            if (!debtList || isNaN(extraPayment)) {
+            if (debts.length === 0 || isNaN(extraPayment)) {
                 alert('Please fill in all fields correctly.');
                 return;
             }
 
-            const debts = debtList.split('\n').map(line => {
-                const [name, balance, rate, minimum] = line.split('/');
-                return {
-                    name: name.trim(),
-                    balance: parseFloat(balance),
-                    rate: parseFloat(rate),
-                    minimum: parseFloat(minimum)
-                };
-            });
-
-            if (debts.some(debt => isNaN(debt.balance) || isNaN(debt.rate) || isNaN(debt.minimum))) {
-                alert('Please ensure all debt entries are correctly formatted.');
-                return;
-            }
-
-            const results = calculatePayoff(debts, extraPayment, method);
+            const results = calculateDebtPayoff(debts, extraPayment, method);
             displayResults(results);
-        });
+        }
 
-        function calculatePayoff(debts, extraPayment, method) {
-            // Sort debts based on the selected method
-            debts.sort((a, b) => {
-                if (method === 'snowball') {
-                    return a.balance - b.balance;
-                } else {
-                    return (b.rate - a.rate);
-                }
-            });
-
+        function calculateDebtPayoff(debts, extraPayment, method) {
+            debts.sort((a, b) => method === 'snowball' ? a.balance - b.balance : b.rate - a.rate);
             let totalInterestSaved = 0;
             let timeline = [];
-            let monthlySchedule = [];
+            let schedule = [];
             let month = 0;
 
             while (debts.some(debt => debt.balance > 0)) {
-                month++;
                 let monthlyPayment = extraPayment;
-
-                for (let debt of debts) {
-                    if (debt.balance <= 0) continue;
-
-                    const interest = (debt.balance * (debt.rate / 100)) / 12;
-                    const payment = Math.min(debt.balance + interest, debt.minimum + monthlyPayment);
-                    debt.balance += interest - payment;
-                    monthlyPayment -= (payment - debt.minimum);
-                    totalInterestSaved += interest;
-
-                    monthlySchedule.push({
-                        month,
-                        debt: debt.name,
-                        payment: payment.toFixed(2),
-                        remainingBalance: debt.balance.toFixed(2)
-                    });
-
-                    if (monthlyPayment <= 0) break;
-                }
-
-                timeline.push(`Month ${month}: ${debts.map(debt => `${debt.name} - $${debt.balance.toFixed(2)}`).join(', ')}`);
+                debts.forEach(debt => {
+                    if (debt.balance > 0) {
+                        const interest = (debt.balance * (debt.rate / 100)) / 12;
+                        const payment = Math.min(debt.balance + interest, debt.minimum + monthlyPayment);
+                        debt.balance += interest - payment;
+                        monthlyPayment -= (payment - debt.minimum);
+                        totalInterestSaved += interest;
+                        schedule.push({ month, name: debt.name, payment: payment.toFixed(2), balance: debt.balance.toFixed(2) });
+                    }
+                });
+                timeline.push(`Month ${month + 1}: ${debts.map(debt => `${debt.name} - $${debt.balance.toFixed(2)}`).join(', ')}`);
+                month++;
             }
 
-            return {
-                payoffOrder: debts.map(debt => debt.name),
-                timeline,
-                totalInterestSaved: totalInterestSaved.toFixed(2),
-                monthlySchedule
-            };
+            return { payoffOrder: debts.map(debt => debt.name), timeline, totalInterestSaved, schedule };
         }
 
         function displayResults(results) {
-            document.getElementById('payoffOrder').innerHTML = `<strong>Payoff Order:</strong> ${results.payoffOrder.join(', ')}`;
-            document.getElementById('timeline').innerHTML = `<strong>Timeline:</strong><br>${results.timeline.join('<br>')}`;
-            document.getElementById('totalInterestSaved').innerHTML = `<strong>Total Interest Saved:</strong> $${results.totalInterestSaved}`;
-            document.getElementById('monthlySchedule').innerHTML = `<strong>Monthly Schedule:</strong><br>${results.monthlySchedule.map(schedule => `Month ${schedule.month}: ${schedule.debt} - Payment: $${schedule.payment}, Remaining Balance: $${schedule.remainingBalance}`).join('<br>')}`;
+            document.getElementById('payoff-order').innerHTML = `<strong>Payoff Order:</strong> ${results.payoffOrder.join(', ')}`;
+            document.getElementById('timeline').innerHTML = `<strong>Timeline:</strong> <pre>${results.timeline.join('\n')}</pre>`;
+            document.getElementById('total-interest-saved').innerHTML = `<strong>Total Interest Saved:</strong> $${results.totalInterestSaved.toFixed(2)}`;
+            const scheduleTable = document.getElementById('schedule-table');
+            scheduleTable.innerHTML = '<tr><th>Month</th><th>Debt</th><th>Payment</th><th>Balance</th></tr>';
+            results.schedule.forEach(entry => {
+                scheduleTable.innerHTML += `<tr><td>${entry.month + 1}</td><td>${entry.name}</td><td>$${entry.payment}</td><td>$${entry.balance}</td></tr>`;
+            });
             document.getElementById('results').style.display = 'block';
         }
 
@@ -250,15 +261,17 @@
             navigator.clipboard.writeText(url).then(() => {
                 alert('URL copied to clipboard!');
             });
-            const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Debt Snowball Planner!`;
-            window.open(twitterUrl, '_blank');
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Debt Snowball Planner!`, '_blank');
         }
 
-        function handleEmailSignup(event) {
-            event.preventDefault();
+        function handleEmailSignup() {
             const email = document.getElementById('email').value;
-            alert(`Thank you for subscribing with ${email}!`);
-            document.getElementById('emailSignupForm').reset();
+            if (email) {
+                alert('Thank you for subscribing!');
+                // Add email handling logic here
+            } else {
+                alert('Please enter a valid email address.');
+            }
         }
     </script>
 </body>
