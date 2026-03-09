@@ -438,7 +438,33 @@
       render(); window.scrollTo({top:0,behavior:"smooth"});
     });
 
-    fetch("/_data/articles.json").then(r => r.ok ? r.json() : Promise.reject(r.status)).then(init).catch(() => init(SEED));
+    async function loadArticles() {
+      const seg = window.location.pathname.split("/").filter(Boolean);
+      const repoBase = seg.length > 0 ? `/${seg[0]}` : "";
+      const candidates = [
+        "https://janbarcik.github.io/hive-blog/_data/articles.json",
+        `${repoBase}/_data/articles.json`,
+        "/_data/articles.json",
+        "./_data/articles.json",
+        "../_data/articles.json"
+      ];
+      for (const url of candidates) {
+        try {
+          const res = await fetch(url, { cache: "no-store" });
+          if (!res.ok) continue;
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            return init(data);
+          }
+        } catch (_e) {
+          // try next candidate
+        }
+      }
+      console.warn("Could not fetch full articles.json; using current-page seed only");
+      init(SEED);
+    }
+
+    loadArticles();
   })();
   </script>
 </body>
