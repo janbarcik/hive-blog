@@ -1,5 +1,85 @@
 [
   {
+    "title": "Herman Miller Aeron vs Steelcase Leap: The Ultimate Ergonomic Office Chair Showdown",
+    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-the-ultimate-ergonomic-office-chair-showdo/",
+    "slug": "herman-miller-aeron-vs-steelcase-leap-the-ultimate-ergonomic-office-chair-showdo",
+    "meta_description": "Discover the ultimate ergonomic battle: Herman Miller Aeron vs Steelcase Leap. Find out which chair reigns supreme for comfort and productivity!",
+    "worker": "Worker-2",
+    "published_at": "2026-03-09T07:07:58.739092",
+    "format": "comparator",
+    "niche": "ergonomic office chairs"
+  },
+  {
+    "title": "NOCO Boost vs Clore Automotive: Which Portable Car Jump Starter Suits Your Needs?",
+    "url": "https://janbarcik.github.io/hive-blog/noco-boost-vs-clore-automotive-which-portable-car-jump-starter-suits-your-needs/",
+    "slug": "noco-boost-vs-clore-automotive-which-portable-car-jump-starter-suits-your-needs",
+    "meta_description": "Compare NOCO Boost vs Clore Automotive to find the perfect portable car jump starter for your needs. Power your engine effortlessly today!",
+    "worker": "Worker-6",
+    "published_at": "2026-03-09T07:10:41.270755",
+    "format": "comparator",
+    "niche": "portable car jump starters"
+  },
+  {
+    "title": "The Ultimate Compact Espresso Machine Buyers Guide",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-compact-espresso-machine-buyers-guide/",
+    "slug": "the-ultimate-compact-espresso-machine-buyers-guide",
+    "meta_description": "Discover the best compact espresso machines with our ultimate buyers guide. Sip delicious coffee at home—perfect for small spaces! Find your match today!",
+    "worker": "Worker-3",
+    "published_at": "2026-03-09T07:07:49.549368",
+    "format": "guide",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-09T07:06:47.624883",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-09T07:07:08.690898",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top 10 Best Portable Car Jump Starters: Expert Reviews and Comparisons",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-best-portable-car-jump-starters-expert-reviews-and-comparisons/",
+    "slug": "top-10-best-portable-car-jump-starters-expert-reviews-and-comparisons",
+    "meta_description": "Discover the top 10 best portable car jump starter reviews. Expert insights and comparisons to help you find the ideal jumper for your vehicle!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-09T07:08:33.218529",
+    "format": "reviewer",
+    "niche": "portable car jump starters"
+  },
+  {
+    "title": "Top 10 Wireless Earbuds Reviews: Find Your Perfect Audio Companion",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-wireless-earbuds-reviews-find-your-perfect-audio-companion/",
+    "slug": "top-10-wireless-earbuds-reviews-find-your-perfect-audio-companion",
+    "meta_description": "Discover the best wireless earbuds reviews! Explore our top 10 picks to find your perfect audio companion for exceptional sound and ultimate comfort.",
+    "worker": "Worker-5",
+    "published_at": "2026-03-09T07:09:51.500023",
+    "format": "reviewer",
+    "niche": "wireless earbuds"
+  },
+  {
+    "title": "Top Robotic Vacuum Cleaners Under $50: Affordable Solutions for a Cleaner Home",
+    "url": "https://janbarcik.github.io/hive-blog/top-robotic-vacuum-cleaners-under-50-affordable-solutions-for-a-cleaner-home/",
+    "slug": "top-robotic-vacuum-cleaners-under-50-affordable-solutions-for-a-cleaner-home",
+    "meta_description": "Discover the best robotic vacuum cleaners under $50! Explore affordable solutions for a cleaner home without breaking the bank. Efficient cleaning awaits!",
+    "worker": "Worker-4",
+    "published_at": "2026-03-09T07:09:50.180420",
+    "format": "bargain",
+    "niche": "robotic vacuum cleaners"
+  },
+  {
     "title": "Daily Crypto Signals — March 09",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-09/",
     "slug": "crypto-signals-2026-03-09",
@@ -48,26 +128,6 @@
     "published_at": "2026-03-09T02:30:38.643208",
     "format": "reviewer",
     "niche": "wireless earbuds"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T02:28:17.012517",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T02:28:37.845752",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 5 Robotic Vacuum Cleaners Under $50: Affordable Cleaning Solutions",
@@ -228,16 +288,6 @@
     "published_at": "2026-03-08T18:18:31.629830",
     "format": "comparator",
     "niche": "ergonomic office chairs"
-  },
-  {
-    "title": "The Ultimate Compact Espresso Machine Buyers Guide",
-    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-compact-espresso-machine-buyers-guide/",
-    "slug": "the-ultimate-compact-espresso-machine-buyers-guide",
-    "meta_description": "Discover the perfect brew with our compact espresso machine buyers guide. Uncover top picks, features, and tips for espresso lovers on the go!",
-    "worker": "Worker-3",
-    "published_at": "2026-03-08T18:18:30.525100",
-    "format": "guide",
-    "niche": "compact espresso machines"
   },
   {
     "title": "Top 5 Robotic Vacuum Cleaners Under $50 for Budget-Friendly Cleaning",
