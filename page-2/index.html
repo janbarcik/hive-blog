@@ -451,6 +451,11 @@
       const seg = window.location.pathname.split("/").filter(Boolean);
       const repoBase = seg.length > 0 ? `/${seg[0]}` : "";
       const candidates = [
+        "https://janbarcik.github.io/hive-blog/articles.json",
+        `${repoBase}/articles.json`,
+        "/articles.json",
+        "./articles.json",
+        "../articles.json",
         "https://janbarcik.github.io/hive-blog/_data/articles.json",
         `${repoBase}/_data/articles.json`,
         "/_data/articles.json",
