@@ -1,13 +1,33 @@
 [
   {
-    "title": "Daily Crypto Signals — March 10",
-    "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-10/",
-    "slug": "crypto-signals-2026-03-10",
-    "meta_description": "Daily cryptocurrency trading signals: BUY/SELL/HOLD with RSI and MA analysis.",
-    "worker": "SignalBot-932",
-    "published_at": "2026-03-10T01:30:21.501028",
-    "format": "",
-    "niche": ""
+    "title": "Compact Espresso Machines Buyers Guide: Choose the Perfect Fit for Your Kitchen",
+    "url": "https://janbarcik.github.io/hive-blog/compact-espresso-machines-buyers-guide-choose-the-perfect-fit-for-your-kitchen/",
+    "slug": "compact-espresso-machines-buyers-guide-choose-the-perfect-fit-for-your-kitchen",
+    "meta_description": "Discover the ultimate compact espresso machines buyers guide! Find the perfect fit for your kitchen and elevate your coffee experience today.",
+    "worker": "Worker-3",
+    "published_at": "2026-03-10T01:31:18.746716",
+    "format": "guide",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "DWC vs NFT Hydroponic Systems: Which is Best for Your Indoor Garden?",
+    "url": "https://janbarcik.github.io/hive-blog/dwc-vs-nft-hydroponic-systems-which-is-best-for-your-indoor-garden/",
+    "slug": "dwc-vs-nft-hydroponic-systems-which-is-best-for-your-indoor-garden",
+    "meta_description": "Explore DWC vs NFT hydroponic systems to find the ideal choice for your indoor garden. Uncover key benefits and maximize your growing potential!",
+    "worker": "Worker-6",
+    "published_at": "2026-03-10T01:34:03.180560",
+    "format": "comparator",
+    "niche": "indoor hydroponic growing systems"
+  },
+  {
+    "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Office Chair is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-/",
+    "slug": "herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-",
+    "meta_description": "Discover the ultimate ergonomic showdown: Herman Miller Aeron vs Steelcase Leap. Find out which office chair suits your comfort and style needs best!",
+    "worker": "Worker-2",
+    "published_at": "2026-03-10T01:31:09.270864",
+    "format": "comparator",
+    "niche": "ergonomic office chairs"
   },
   {
     "title": "Compound Interest Calculator",
@@ -15,7 +35,7 @@
     "slug": "tools/compound-interest-calculator",
     "meta_description": "Visualize exactly how your money grows with compound interest over time",
     "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T22:54:12.063714",
+    "published_at": "2026-03-10T01:30:30.145227",
     "format": "tool",
     "niche": "finance"
   },
@@ -25,9 +45,49 @@
     "slug": "tools/mortgage-payoff-calculator",
     "meta_description": "See how extra payments slash your mortgage timeline and total interest",
     "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T22:54:29.970876",
+    "published_at": "2026-03-10T01:30:47.204362",
     "format": "tool",
     "niche": "finance"
+  },
+  {
+    "title": "Top 10 Indoor Hydroponic Growing Systems Reviewed for 2023",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-indoor-hydroponic-growing-systems-reviewed-for-2023/",
+    "slug": "top-10-indoor-hydroponic-growing-systems-reviewed-for-2023",
+    "meta_description": "Discover the best indoor hydroponic growing system reviews for 2023! Explore our top 10 picks to elevate your home gardening experience. Grow smarter!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-10T01:31:59.138081",
+    "format": "reviewer",
+    "niche": "indoor hydroponic growing systems"
+  },
+  {
+    "title": "Top Robotic Vacuum Cleaners Under $50: Affordable Cleaners for Every Home",
+    "url": "https://janbarcik.github.io/hive-blog/top-robotic-vacuum-cleaners-under-50-affordable-cleaners-for-every-home/",
+    "slug": "top-robotic-vacuum-cleaners-under-50-affordable-cleaners-for-every-home",
+    "meta_description": "Discover the best robotic vacuum cleaners under $50! Keep your home spotless with budget-friendly options that deliver efficiency and convenience.",
+    "worker": "Worker-4",
+    "published_at": "2026-03-10T01:32:34.258416",
+    "format": "bargain",
+    "niche": "robotic vacuum cleaners"
+  },
+  {
+    "title": "Top Wireless Earbuds of 2023: Reviews and Comparisons",
+    "url": "https://janbarcik.github.io/hive-blog/top-wireless-earbuds-of-2023-reviews-and-comparisons/",
+    "slug": "top-wireless-earbuds-of-2023-reviews-and-comparisons",
+    "meta_description": "Discover the best wireless earbuds of 2023! Explore our reviews and comparisons to find your perfect audio companion. Don't miss the best wireless earbuds",
+    "worker": "Worker-5",
+    "published_at": "2026-03-10T01:32:52.022100",
+    "format": "reviewer",
+    "niche": "wireless earbuds"
+  },
+  {
+    "title": "Daily Crypto Signals — March 10",
+    "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-10/",
+    "slug": "crypto-signals-2026-03-10",
+    "meta_description": "Daily cryptocurrency trading signals: BUY/SELL/HOLD with RSI and MA analysis.",
+    "worker": "SignalBot-932",
+    "published_at": "2026-03-10T01:30:21.501028",
+    "format": "",
+    "niche": ""
   },
   {
     "title": "Top Robotic Vacuum Cleaners Reviewed: Which Model is Right for You?",
@@ -684,14 +744,6 @@
     "meta_description": "Discover which compact food dehydrator reigns supreme in our Excalibur vs Nesco comparison. Find the perfect fit for your kitchen today!",
     "worker": "Worker-6",
     "published_at": "2026-03-08T10:13:46.312317"
-  },
-  {
-    "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Office Chair is Right for You?",
-    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-/",
-    "slug": "herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-",
-    "meta_description": "Discover the ultimate showdown: Herman Miller Aeron vs Steelcase Leap. Explore features, comfort, and design to find your perfect ergonomic office chair!",
-    "worker": "Worker-2",
-    "published_at": "2026-03-08T10:11:12.200360"
   },
   {
     "title": "The Ultimate Compact Espresso Machine Buyers Guide: Find Your Perfect Fit",
