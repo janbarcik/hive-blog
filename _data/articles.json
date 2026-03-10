@@ -1,5 +1,85 @@
 [
   {
+    "title": "Breville Bambino Plus vs Rancilio Silvia: Compact Espresso Machine Showdown",
+    "url": "https://janbarcik.github.io/hive-blog/breville-bambino-plus-vs-rancilio-silvia-compact-espresso-machine-showdown/",
+    "slug": "breville-bambino-plus-vs-rancilio-silvia-compact-espresso-machine-showdown",
+    "meta_description": "Discover the ultimate espresso showdown: Breville Bambino Plus vs Rancilio Silvia. Which compact machine reigns supreme for coffee lovers? Find out now!",
+    "worker": "Worker-6",
+    "published_at": "2026-03-10T18:46:36.163584",
+    "format": "comparator",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "Compact Espresso Machines Buyers Guide: Top Picks for Small Spaces",
+    "url": "https://janbarcik.github.io/hive-blog/compact-espresso-machines-buyers-guide-top-picks-for-small-spaces/",
+    "slug": "compact-espresso-machines-buyers-guide-top-picks-for-small-spaces",
+    "meta_description": "Discover the ultimate compact espresso machines buyers guide! Find top picks perfect for small spaces and brew café-quality coffee at home.",
+    "worker": "Worker-3",
+    "published_at": "2026-03-10T18:43:16.070179",
+    "format": "guide",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Office Chair is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-/",
+    "slug": "herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-",
+    "meta_description": "Discover the ultimate ergonomic showdown: Herman Miller Aeron vs Steelcase Leap. Find out which office chair suits your needs for comfort and support!",
+    "worker": "Worker-2",
+    "published_at": "2026-03-10T18:43:21.246312",
+    "format": "comparator",
+    "niche": "ergonomic office chairs"
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-10T18:42:09.112804",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-10T18:42:41.123750",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top 10 Best Compact Espresso Machines: Reviews and Buyer’s Guide",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-best-compact-espresso-machines-reviews-and-buyer-s-guide/",
+    "slug": "top-10-best-compact-espresso-machines-reviews-and-buyer-s-guide",
+    "meta_description": "Discover the top 10 best compact espresso machine reviews! Find your perfect brewing companion with expert insights and essential buying tips.",
+    "worker": "Worker-1",
+    "published_at": "2026-03-10T18:44:10.671296",
+    "format": "reviewer",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "Top Robotic Vacuum Cleaners Under $50 That Deliver Great Value",
+    "url": "https://janbarcik.github.io/hive-blog/top-robotic-vacuum-cleaners-under-50-that-deliver-great-value/",
+    "slug": "top-robotic-vacuum-cleaners-under-50-that-deliver-great-value",
+    "meta_description": "Discover the best robotic vacuum cleaners under $50 that deliver exceptional value! Clean smarter with our top picks for budget-friendly automation.",
+    "worker": "Worker-4",
+    "published_at": "2026-03-10T18:45:18.317590",
+    "format": "bargain",
+    "niche": "robotic vacuum cleaners"
+  },
+  {
+    "title": "Top Wireless Earbuds Reviews: Sound, Comfort, and Connectivity Tested",
+    "url": "https://janbarcik.github.io/hive-blog/top-wireless-earbuds-reviews-sound-comfort-and-connectivity-tested/",
+    "slug": "top-wireless-earbuds-reviews-sound-comfort-and-connectivity-tested",
+    "meta_description": "Discover the best wireless earbuds reviews! Dive into expert tests on sound quality, comfort, and connectivity to find your perfect listening companion.",
+    "worker": "Worker-5",
+    "published_at": "2026-03-10T18:45:29.955371",
+    "format": "reviewer",
+    "niche": "wireless earbuds"
+  },
+  {
     "title": "Daily Crypto Signals — March 10",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-10/",
     "slug": "crypto-signals-2026-03-10",
@@ -58,26 +138,6 @@
     "published_at": "2026-03-10T12:55:05.493177",
     "format": "reviewer",
     "niche": "wireless earbuds"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-10T12:52:48.234500",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-10T12:53:27.231519",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Waterpik vs Sonicare: Which Electric Toothbrush is Better for Your Oral Health?",
@@ -158,16 +218,6 @@
     "published_at": "2026-03-10T01:34:03.180560",
     "format": "comparator",
     "niche": "indoor hydroponic growing systems"
-  },
-  {
-    "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Office Chair is Right for You?",
-    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-/",
-    "slug": "herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-",
-    "meta_description": "Discover the ultimate ergonomic showdown: Herman Miller Aeron vs Steelcase Leap. Find out which office chair suits your comfort and style needs best!",
-    "worker": "Worker-2",
-    "published_at": "2026-03-10T01:31:09.270864",
-    "format": "comparator",
-    "niche": "ergonomic office chairs"
   },
   {
     "title": "Top 10 Indoor Hydroponic Growing Systems Reviewed for 2023",
