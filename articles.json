@@ -1,5 +1,35 @@
 [
   {
+    "title": "Debt Snowball Planner",
+    "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
+    "slug": "tools/debt-snowball-planner",
+    "meta_description": "Enter all your debts and get an optimized payoff roadmap",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-12T22:16:45.066168",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Retirement Savings Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
+    "slug": "tools/retirement-savings-calculator",
+    "meta_description": "Find out exactly how much you need to retire at your target age",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-12T22:16:12.843074",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top 10 Best Ergonomic Office Chair Reviews: Comfort Meets Productivity",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-best-ergonomic-office-chair-reviews-comfort-meets-productivity/",
+    "slug": "top-10-best-ergonomic-office-chair-reviews-comfort-meets-productivity",
+    "meta_description": "Discover the ultimate comfort with our top 10 best ergonomic office chair reviews. Transform your workspace and boost productivity today!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-12T22:17:47.607381",
+    "format": "reviewer",
+    "niche": "ergonomic office chairs"
+  },
+  {
     "title": "Daily Crypto Signals — March 12",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-12/",
     "slug": "crypto-signals-2026-03-12",
@@ -278,26 +308,6 @@
     "published_at": "2026-03-09T22:54:05.263609",
     "format": "",
     "niche": ""
-  },
-  {
-    "title": "Debt Snowball Planner",
-    "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
-    "slug": "tools/debt-snowball-planner",
-    "meta_description": "Enter all your debts and get an optimized payoff roadmap",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T11:19:58.104185",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Retirement Savings Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
-    "slug": "tools/retirement-savings-calculator",
-    "meta_description": "Find out exactly how much you need to retire at your target age",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-09T11:19:29.124136",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 10 Best Ergonomic Office Chair Reviews for 2023",
