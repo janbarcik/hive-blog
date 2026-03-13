@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Deficit & Macro Calculator</title>
+    <meta name="description" content="Calculate your daily calorie target, protein, carbs, and fat breakdown for weight loss, maintenance, or gain.">
+    <meta property="og:title" content="Calorie Deficit & Macro Calculator">
+    <meta property="og:description" content="Get your daily calorie target, protein, carbs, and fat breakdown.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/calorie-macro-calculator">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Calorie Deficit & Macro Calculator",
+      "description": "Calculate your daily calorie target, protein, carbs, and fat breakdown.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "url": "https://example.com/calorie-macro-calculator"
+    }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .ad-slot {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+        }
+        .affiliate-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+        }
+        .affiliate-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+        }
+        .affiliate-btn:hover {
+            background: #218838;
+        }
+        .email-capture {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+        }
+        .share-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .share-buttons button {
+            margin: 5px;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            .container, .results, .affiliate-box, .email-capture {
+                background: #1e1e1e;
+                color: #e0e0e0;
+            }
+            button, .affiliate-btn {
+                background: #bb86fc;
+            }
+            button:hover, .affiliate-btn:hover {
+                background: #3700b3;
+            }
+            nav a {
+                color: #bb86fc;
+            }
+        }
+        @media print {
+            body {
+                color: #000;
+                background: #fff;
+            }
+            .container, .results, .affiliate-box, .email-capture {
+                background: #fff;
+                color: #000;
+                box-shadow: none;
+            }
+            .ad-slot, .email-capture, .share-buttons, nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calorie Deficit & Macro Calculator</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tools/">Tools</a>
+        </nav>
+        <div class="ad-slot"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-7483634241992957" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="pub-7483634241992957" data-ad-slot="f08c47fec0942fa0" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+        <form id="calculator-form">
+            <div class="form-group">
+                <label for="weight_kg">Weight (kg):</label>
+                <input type="number" id="weight_kg" required>
+            </div>
+            <div class="form-group">
+                <label for="height_cm">Height (cm):</label>
+                <input type="number" id="height_cm" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="activity_level">Activity Level:</label>
+                <select id="activity_level" required>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="light">Lightly active</option>
+                    <option value="moderate">Moderately active</option>
+                    <option value="active">Very active</option>
+                    <option value="extra">Extra active</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="goal">Goal:</label>
+                <select id="goal" required>
+                    <option value="lose">Lose weight</option>
+                    <option value="maintain">Maintain weight</option>
+                    <option value="gain">Gain weight</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="weekly_rate">Weekly Rate (kg):</label>
+                <input type="number" id="weekly_rate" step="0.1" required>
+            </div>
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        <div class="results" id="results" style="display:none;">
+            <h3>Results</h3>
+            <p id="tdee"></p>
+            <p id="deficit_calories"></p>
+            <p id="macro_breakdown_grams"></p>
+            <p id="weekly_projections"></p>
+        </div>
+        <div class="affiliate-box">
+            <h4>💡 Recommended</h4>
+            <p>Best protein powders ranked by nutritionists [affiliate link]</p>
+            <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
+            <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
+        </div>
+        <div class="email-capture">
+            <h4>Get weekly free tools</h4>
+            <form onsubmit="handleEmailSignup(event)">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="share-buttons">
+            <button onclick="share()">Share this tool</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Health Tools</p>
+    </footer>
+    <script>
+        function calculate() {
+            const weight = parseFloat(document.getElementById('weight_kg').value);
+            const height = parseFloat(document.getElementById('height_cm').value);
+            const age = parseInt(document.getElementById('age').value);
+            const gender = document.getElementById('gender').value;
+            const activityLevel = document.getElementById('activity_level').value;
+            const goal = document.getElementById('goal').value;
+            const weeklyRate = parseFloat(document.getElementById('weekly_rate').value);
+
+            if (isNaN(weight) || isNaN(height) || isNaN(age) || isNaN(weeklyRate)) {
+                alert('Please fill out all fields correctly.');
+                return;
+            }
+
+            let bmr;
+            if (gender === 'male') {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+            }
+
+            const activityMultipliers = {
+                sedentary: 1.2,
+                light: 1.375,
+                moderate: 1.55,
+                active: 1.725,
+                extra: 1.9
+            };
+
+            const tdee = bmr * activityMultipliers[activityLevel];
+            let calorieAdjustment = 0;
+
+            if (goal === 'lose') {
+                calorieAdjustment = -7700 * weeklyRate / 7;
+            } else if (goal === 'gain') {
+                calorieAdjustment = 7700 * weeklyRate / 7;
+            }
+
+            const deficitCalories = tdee + calorieAdjustment;
+            const protein = weight * 2;
+            const fat = weight * 0.8;
+            const carbs = (deficitCalories - (protein * 4 + fat * 9)) / 4;
+
+            document.getElementById('tdee').innerText = `TDEE: ${tdee.toFixed(2)} kcal/day`;
+            document.getElementById('deficit_calories').innerText = `Calorie Target: ${deficitCalories.toFixed(2)} kcal/day`;
+            document.getElementById('macro_breakdown_grams').innerText = `Macros: Protein: ${protein.toFixed(2)}g, Carbs: ${carbs.toFixed(2)}g, Fat: ${fat.toFixed(2)}g`;
+            document.getElementById('weekly_projections').innerText = `Weekly Projections: ${goal === 'maintain' ? 'Maintain weight' : goal === 'lose' ? `Lose ${weeklyRate} kg` : `Gain ${weeklyRate} kg`}`;
+
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function handleEmailSignup(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            alert(`Thank you for subscribing with ${email}!`);
+        }
+
+        function share() {
+            const url = window.location.href;
+            const twitterIntent = `https://twitter.com/intent/tweet?text=Check out this Calorie Deficit & Macro Calculator! ${url}`;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('URL copied to clipboard!');
+            });
+            window.open(twitterIntent, '_blank');
+        }
+    </script>
+</body>
+</html>
