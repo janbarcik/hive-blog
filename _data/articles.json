@@ -1,5 +1,35 @@
 [
   {
+    "title": "Debt Snowball Planner",
+    "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
+    "slug": "tools/debt-snowball-planner",
+    "meta_description": "Enter all your debts and get an optimized payoff roadmap",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-13T14:12:23.166458",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Retirement Savings Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
+    "slug": "tools/retirement-savings-calculator",
+    "meta_description": "Find out exactly how much you need to retire at your target age",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-13T14:11:56.528233",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top 10 Best Portable Induction Cooktop Reviews for Kitchen Enthusiasts",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-best-portable-induction-cooktop-reviews-for-kitchen-enthusiasts/",
+    "slug": "top-10-best-portable-induction-cooktop-reviews-for-kitchen-enthusiasts",
+    "meta_description": "Discover the ultimate guide to the best portable induction cooktop reviews! Elevate your cooking experience with top-rated options for kitchen enthusiasts.",
+    "worker": "Worker-1",
+    "published_at": "2026-03-13T14:14:12.868755",
+    "format": "reviewer",
+    "niche": "portable induction cooktops"
+  },
+  {
     "title": "Daily Crypto Signals — March 13",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-13/",
     "slug": "crypto-signals-2026-03-13",
@@ -178,26 +208,6 @@
     "published_at": "2026-03-13T02:12:35.619846",
     "format": "comparator",
     "niche": "smart locks"
-  },
-  {
-    "title": "Debt Snowball Planner",
-    "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
-    "slug": "tools/debt-snowball-planner",
-    "meta_description": "Enter all your debts and get an optimized payoff roadmap",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-12T22:16:45.066168",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Retirement Savings Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
-    "slug": "tools/retirement-savings-calculator",
-    "meta_description": "Find out exactly how much you need to retire at your target age",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-12T22:16:12.843074",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 10 Best Ergonomic Office Chair Reviews: Comfort Meets Productivity",
