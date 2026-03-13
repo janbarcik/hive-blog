@@ -1,5 +1,15 @@
 [
   {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-13T23:54:53.789831",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
     "title": "Compound Interest Calculator",
     "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
     "slug": "tools/compound-interest-calculator",
@@ -108,16 +118,6 @@
     "published_at": "2026-03-13T22:55:48.172280",
     "format": "reviewer",
     "niche": "compact espresso machines"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-13T22:54:55.043997",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Office Chair is Right for You?",
