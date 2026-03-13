@@ -1,5 +1,15 @@
 [
   {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-13T22:54:31.411208",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
     "title": "Herman Miller Aeron vs Steelcase Leap: Which Ergonomic Office Chair is Right for You?",
     "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-/",
     "slug": "herman-miller-aeron-vs-steelcase-leap-which-ergonomic-office-chair-is-right-for-",
@@ -28,16 +38,6 @@
     "published_at": "2026-03-13T16:04:19.534069",
     "format": "guide",
     "niche": "compact espresso machines"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-13T16:03:33.607466",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Mortgage Payoff Calculator",
