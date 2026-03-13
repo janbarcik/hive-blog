@@ -1,5 +1,15 @@
 [
   {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-13T22:54:55.043997",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
     "title": "Compound Interest Calculator",
     "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
     "slug": "tools/compound-interest-calculator",
@@ -38,16 +48,6 @@
     "published_at": "2026-03-13T16:04:19.534069",
     "format": "guide",
     "niche": "compact espresso machines"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-13T16:04:25.294730",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 10 Best Ergonomic Office Chairs Reviews for Ultimate Comfort",
