@@ -6,65 +6,64 @@
     <title>Mortgage Payoff Calculator</title>
     <meta name="description" content="See how extra payments slash your mortgage timeline and total interest with our Mortgage Payoff Calculator.">
     <meta property="og:title" content="Mortgage Payoff Calculator">
-    <meta property="og:description" content="See how extra payments slash your mortgage timeline and total interest.">
+    <meta property="og:description" content="See how extra payments slash your mortgage timeline and total interest with our Mortgage Payoff Calculator.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com/mortgage-payoff-calculator">
-    <meta property="og:image" content="https://yourwebsite.com/image.jpg">
+    <meta property="og:image" content="https://yourwebsite.com/images/mortgage-calculator.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f4f4f9;
+            line-height: 1.6;
             color: #333;
+            background-color: #f4f4f9;
         }
-        header, footer {
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
+        .container {
             max-width: 800px;
-            width: 100%;
+            margin: 0 auto;
             padding: 20px;
         }
-        .input-group {
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        .form-group {
             margin-bottom: 15px;
         }
         label {
             display: block;
             margin-bottom: 5px;
         }
-        input {
+        input[type="number"] {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
         }
-        button {
+        .btn {
+            display: inline-block;
             padding: 10px 15px;
             background-color: #007bff;
             color: #fff;
-            border: none;
-            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
         }
-        button:hover {
+        .btn:hover {
             background-color: #0056b3;
         }
-        .results, .affiliate-box, .ad-slot {
+        .results {
             margin-top: 20px;
-            padding: 15px;
+            padding: 20px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .affiliate-box {
-            background-color: #f9f9f9;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
         }
         .affiliate-btn {
             display: inline-block;
@@ -73,88 +72,87 @@
             background-color: #28a745;
             color: #fff;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 5px;
         }
         .affiliate-btn:hover {
             background-color: #218838;
         }
         .ad-slot {
+            margin: 20px 0;
             text-align: center;
         }
-        .email-capture {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .email-capture input {
-            width: auto;
+        .share-btn {
+            margin-top: 10px;
             display: inline-block;
-            margin-right: 10px;
+            padding: 8px 12px;
+            background-color: #1da1f2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        .share-buttons {
-            margin-top: 20px;
-            text-align: center;
+        .share-btn:hover {
+            background-color: #0d95e8;
         }
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #121212;
                 color: #e0e0e0;
             }
-            .results, .affiliate-box, .ad-slot {
+            .results, .affiliate-box {
                 background-color: #1e1e1e;
             }
         }
         @media print {
-            header, footer, .ad-slot, .email-capture, .share-buttons {
+            .btn, .affiliate-box, .ad-slot, .share-btn, .email-capture {
                 display: none;
             }
         }
     </style>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Mortgage Payoff Calculator",
-      "description": "See how extra payments slash your mortgage timeline and total interest.",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "url": "https://yourwebsite.com/mortgage-payoff-calculator"
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Mortgage Payoff Calculator",
+        "description": "See how extra payments slash your mortgage timeline and total interest.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "url": "https://yourwebsite.com/mortgage-payoff-calculator"
     }
     </script>
 </head>
 <body>
-    <header>
+    <div class="container">
         <nav>
-            <a href="/" style="color: #fff; margin-right: 15px;">Home</a>
-            <a href="/tools/" style="color: #fff;">Tools</a>
+            <a href="/" class="btn">Home</a>
+            <a href="/tools/" class="btn">Tools Directory</a>
         </nav>
-    </header>
-    <main>
         <h1>Mortgage Payoff Calculator</h1>
+        <p>See how extra payments slash your mortgage timeline and total interest.</p>
         <div class="ad-slot"><!-- AdSense code here --></div>
         <form id="mortgageForm">
-            <div class="input-group">
+            <div class="form-group">
                 <label for="loan_amount">Loan Amount ($):</label>
                 <input type="number" id="loan_amount" required>
             </div>
-            <div class="input-group">
+            <div class="form-group">
                 <label for="interest_rate">Interest Rate (%):</label>
-                <input type="number" step="0.01" id="interest_rate" required>
+                <input type="number" id="interest_rate" step="0.01" required>
             </div>
-            <div class="input-group">
+            <div class="form-group">
                 <label for="loan_term_years">Loan Term (years):</label>
                 <input type="number" id="loan_term_years" required>
             </div>
-            <div class="input-group">
+            <div class="form-group">
                 <label for="extra_monthly_payment">Extra Monthly Payment ($):</label>
                 <input type="number" id="extra_monthly_payment" required>
             </div>
-            <button type="button" onclick="calculatePayoff()">Calculate</button>
+            <button type="button" class="btn" onclick="calculatePayoff()">Calculate</button>
         </form>
-        <div class="results" id="results" style="display: none;">
+        <div class="results" id="results" style="display:none;">
             <h2>Results</h2>
             <p id="years_saved"></p>
             <p id="interest_saved"></p>
-            <canvas id="amortizationChart" width="400" height="200"></canvas>
+            <canvas id="amortizationChart"></canvas>
         </div>
         <div class="affiliate-box">
             <h4>💡 Recommended</h4>
@@ -164,16 +162,13 @@
         </div>
         <div class="email-capture">
             <h3>Get weekly free tools</h3>
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <button onclick="handleEmailSignup()">Subscribe</button>
+            <form onsubmit="handleEmailSignup(event)">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
         </div>
-        <div class="share-buttons">
-            <button onclick="sharePage()">Share this tool</button>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2023 Your Website</p>
-    </footer>
+        <a href="#" class="share-btn" onclick="shareTool()">Share this tool</a>
+    </div>
     <script>
         function calculatePayoff() {
             const loanAmount = parseFloat(document.getElementById('loan_amount').value);
@@ -192,11 +187,12 @@
             let months = 0;
 
             while (remainingBalance > 0) {
-                const interest = remainingBalance * interestRate;
-                const principal = Math.min(monthlyPayment + extraPayment - interest, remainingBalance);
-                remainingBalance -= principal;
-                totalInterest += interest;
+                const interestPayment = remainingBalance * interestRate;
+                const principalPayment = monthlyPayment + extraPayment - interestPayment;
+                remainingBalance -= principalPayment;
+                totalInterest += interestPayment;
                 months++;
+                if (months > 1000) break; // Prevent infinite loop
             }
 
             const originalTotalInterest = loanAmount * interestRate / (1 - Math.pow(1 + interestRate, -loanTermMonths)) * loanTermMonths - loanAmount;
@@ -215,7 +211,7 @@
                     datasets: [{
                         label: 'Total Interest',
                         data: [originalTotalInterest, totalInterest],
-                        backgroundColor: ['#007bff', '#28a745']
+                        backgroundColor: ['#ff6384', '#36a2eb']
                     }]
                 },
                 options: {
@@ -229,24 +225,17 @@
             });
         }
 
-        function handleEmailSignup() {
-            const email = document.getElementById('email').value;
-            if (email) {
-                alert('Thank you for subscribing!');
-                // Add email handling logic here
-            } else {
-                alert('Please enter a valid email address.');
-            }
+        function handleEmailSignup(event) {
+            event.preventDefault();
+            alert('Thank you for subscribing!');
         }
 
-        function sharePage() {
+        function shareTool() {
             const url = window.location.href;
-            const text = 'Check out this Mortgage Payoff Calculator!';
-            const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
             navigator.clipboard.writeText(url).then(() => {
                 alert('URL copied to clipboard!');
             });
-            window.open(twitterUrl, '_blank');
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Mortgage Payoff Calculator!`, '_blank');
         }
     </script>
 </body>
