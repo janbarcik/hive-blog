@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retirement Savings Calculator | How Much Do I Need to Retire?</title>
+    <title>Retirement Savings Calculator</title>
     <meta name="description" content="Find out exactly how much you need to retire at your target age with our Retirement Savings Calculator.">
     <meta property="og:title" content="Retirement Savings Calculator">
     <meta property="og:description" content="Find out exactly how much you need to retire at your target age with our Retirement Savings Calculator.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com/retirement-savings-calculator">
     <meta property="og:image" content="https://yourwebsite.com/images/retirement-calculator.png">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -25,104 +24,122 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
             color: #333;
             background-color: #f4f4f9;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h4 {
-            color: #333;
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
         }
         input[type="number"] {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin-bottom: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
             border-radius: 4px;
-            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
         }
-        button:hover {
-            background-color: #0056b3;
+        .btn:hover {
+            background: #0056b3;
         }
         .results {
-            margin-top: 20px;
+            background: #fff;
             padding: 20px;
-            background-color: #e9ecef;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
         .affiliate-box {
-            margin-top: 20px;
+            background: #f9f9f9;
             padding: 15px;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
             border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
         }
         .affiliate-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
+            background: #28a745;
+            color: #fff;
+            padding: 10px 20px;
             border-radius: 4px;
+            text-decoration: none;
         }
         .affiliate-btn:hover {
-            background-color: #218838;
+            background: #218838;
         }
         .ad-slot {
             margin: 20px 0;
             text-align: center;
         }
         .email-capture {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
+            background: #fff;
+            padding: 20px;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            text-align: center;
         }
         .email-capture input[type="email"] {
-            width: calc(100% - 120px);
+            width: 70%;
             padding: 10px;
-            margin-right: 10px;
+            margin-bottom: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
         .email-capture button {
-            width: 100px;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        .email-capture button:hover {
+            background: #0056b3;
         }
         .share-btn {
-            margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #1da1f2;
-            color: white;
-            text-decoration: none;
+            background: #1da1f2;
+            color: #fff;
+            padding: 10px 20px;
             border-radius: 4px;
+            text-decoration: none;
             display: inline-block;
+            margin-top: 10px;
         }
         .share-btn:hover {
-            background-color: #0d95e8;
+            background: #0d95e8;
         }
         nav {
+            text-align: center;
             margin-bottom: 20px;
         }
         nav a {
-            margin-right: 15px;
+            margin: 0 10px;
             text-decoration: none;
             color: #007bff;
         }
@@ -134,56 +151,49 @@
                 background-color: #121212;
                 color: #e0e0e0;
             }
-            .container, .results, .affiliate-box, .email-capture {
-                background-color: #1e1e1e;
-                border-color: #333;
+            form, .results, .affiliate-box, .email-capture {
+                background: #1e1e1e;
+                color: #e0e0e0;
             }
             input[type="number"], input[type="email"] {
-                background-color: #333;
+                background: #333;
                 color: #e0e0e0;
-                border-color: #444;
-            }
-            button, .affiliate-btn, .share-btn {
-                background-color: #007bff;
-            }
-            button:hover, .affiliate-btn:hover, .share-btn:hover {
-                background-color: #0056b3;
-            }
-            nav a {
-                color: #80bfff;
+                border: 1px solid #555;
             }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <nav>
             <a href="/">Home</a>
-            <a href="/tools/">Tools Directory</a>
+            <a href="/tools/">Tools</a>
         </nav>
         <h1>Retirement Savings Calculator</h1>
-        <p>Find out exactly how much you need to retire at your target age.</p>
-        <div class="ad-slot"><!-- AdSense code here --></div>
+        <div class="ad-slot"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-7483634241992957" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="pub-7483634241992957" data-ad-slot="f08c47fec0942fa0" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
         <form id="calculator-form">
-            <label for="current_age">Current Age:</label>
-            <input type="number" id="current_age" min="0" max="100" required>
-            <label for="retirement_age">Retirement Age:</label>
-            <input type="number" id="retirement_age" min="0" max="100" required>
-            <label for="current_savings">Current Savings ($):</label>
-            <input type="number" id="current_savings" min="0" required>
-            <label for="monthly_contribution">Monthly Contribution ($):</label>
-            <input type="number" id="monthly_contribution" min="0" required>
-            <label for="expected_return_pct">Expected Annual Return (%):</label>
-            <input type="number" id="expected_return_pct" min="0" max="100" required>
-            <label for="monthly_expenses_retirement">Monthly Expenses in Retirement ($):</label>
-            <input type="number" id="monthly_expenses_retirement" min="0" required>
-            <button type="button" onclick="calculateRetirement()">Calculate</button>
+            <label for="current_age">Current Age</label>
+            <input type="number" id="current_age" required min="0" max="120">
+            <label for="retirement_age">Retirement Age</label>
+            <input type="number" id="retirement_age" required min="0" max="120">
+            <label for="current_savings">Current Savings ($)</label>
+            <input type="number" id="current_savings" required min="0">
+            <label for="monthly_contribution">Monthly Contribution ($)</label>
+            <input type="number" id="monthly_contribution" required min="0">
+            <label for="expected_return_pct">Expected Annual Return (%)</label>
+            <input type="number" id="expected_return_pct" required min="0" max="100">
+            <label for="monthly_expenses_retirement">Monthly Expenses in Retirement ($)</label>
+            <input type="number" id="monthly_expenses_retirement" required min="0">
+            <button type="button" class="btn" onclick="calculateRetirement()">Calculate</button>
         </form>
         <div class="results" id="results" style="display:none;">
             <h2>Results</h2>
             <p id="savings_at_retirement"></p>
             <p id="monthly_drawdown_years"></p>
-            <canvas id="success_probability_chart" width="400" height="200"></canvas>
+            <canvas id="success_probability" width="400" height="200"></canvas>
         </div>
         <div class="affiliate-box">
             <h4>💡 Recommended</h4>
@@ -208,38 +218,46 @@
             const monthlyExpensesRetirement = parseFloat(document.getElementById('monthly_expenses_retirement').value);
 
             if (retirementAge <= currentAge) {
-                alert("Retirement age must be greater than current age.");
+                alert('Retirement age must be greater than current age.');
                 return;
             }
 
             const yearsToRetirement = retirementAge - currentAge;
             const monthsToRetirement = yearsToRetirement * 12;
-            let futureSavings = currentSavings;
+            let futureValue = currentSavings;
 
             for (let i = 0; i < monthsToRetirement; i++) {
-                futureSavings += monthlyContribution;
-                futureSavings *= (1 + expectedReturnPct / 12);
+                futureValue += monthlyContribution;
+                futureValue *= (1 + expectedReturnPct / 12);
             }
 
             const annualExpenses = monthlyExpensesRetirement * 12;
-            const monthlyDrawdownYears = futureSavings / annualExpenses;
+            const drawdownYears = futureValue / annualExpenses;
 
-            document.getElementById('savings_at_retirement').innerText = `Savings at Retirement: $${futureSavings.toFixed(2)}`;
-            document.getElementById('monthly_drawdown_years').innerText = `Years of Expenses Covered: ${monthlyDrawdownYears.toFixed(2)}`;
+            document.getElementById('savings_at_retirement').innerText = `Savings at Retirement: $${futureValue.toFixed(2)}`;
+            document.getElementById('monthly_drawdown_years').innerText = `Years of Expenses Covered: ${drawdownYears.toFixed(2)}`;
 
-            const ctx = document.getElementById('success_probability_chart').getContext('2d');
+            const ctx = document.getElementById('success_probability').getContext('2d');
             new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Success Probability', 'Failure Probability'],
+                    labels: ['Success', 'Failure'],
                     datasets: [{
-                        data: [monthlyDrawdownYears >= 25 ? 90 : 50, 100 - (monthlyDrawdownYears >= 25 ? 90 : 50)],
+                        data: [drawdownYears >= 20 ? 80 : 40, drawdownYears >= 20 ? 20 : 60],
                         backgroundColor: ['#28a745', '#dc3545']
                     }]
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Success Probability'
+                        }
+                    }
                 }
             });
 
