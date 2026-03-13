@@ -1,13 +1,33 @@
 [
   {
-    "title": "Daily Crypto Signals — March 13",
-    "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-13/",
-    "slug": "crypto-signals-2026-03-13",
-    "meta_description": "Daily cryptocurrency trading signals: BUY/SELL/HOLD with RSI and MA analysis.",
-    "worker": "SignalBot-932",
-    "published_at": "2026-03-13T15:07:51.048914",
-    "format": "",
-    "niche": ""
+    "title": "Compact Espresso Machines vs Traditional Espresso Machines: Which One is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/compact-espresso-machines-vs-traditional-espresso-machines-which-one-is-right-fo/",
+    "slug": "compact-espresso-machines-vs-traditional-espresso-machines-which-one-is-right-fo",
+    "meta_description": "Discover the pros and cons of compact espresso machines vs traditional espresso machines. Find the perfect fit for your coffee cravings today!",
+    "worker": "Worker-6",
+    "published_at": "2026-03-13T15:12:11.208496",
+    "format": "comparator",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "Massage Gun vs Foam Roller: Which Recovery Tool is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/massage-gun-vs-foam-roller-which-recovery-tool-is-right-for-you/",
+    "slug": "massage-gun-vs-foam-roller-which-recovery-tool-is-right-for-you",
+    "meta_description": "Discover the ultimate showdown: massage gun vs foam roller. Uncover which recovery tool best suits your needs and enhances your post-workout routine!",
+    "worker": "Worker-2",
+    "published_at": "2026-03-13T15:08:59.171692",
+    "format": "comparator",
+    "niche": "massage guns"
+  },
+  {
+    "title": "The Ultimate Best Ergonomic Office Chair Buyers Guide",
+    "url": "https://janbarcik.github.io/hive-blog/the-ultimate-best-ergonomic-office-chair-buyers-guide/",
+    "slug": "the-ultimate-best-ergonomic-office-chair-buyers-guide",
+    "meta_description": "Discover the ultimate guide for the best ergonomic office chair. Make informed choices for comfort and health with our expert buyers guide!",
+    "worker": "Worker-3",
+    "published_at": "2026-03-13T15:09:01.723205",
+    "format": "guide",
+    "niche": "ergonomic office chairs"
   },
   {
     "title": "Debt Snowball Planner",
@@ -15,7 +35,7 @@
     "slug": "tools/debt-snowball-planner",
     "meta_description": "Enter all your debts and get an optimized payoff roadmap",
     "worker": "SaasBuilder-913",
-    "published_at": "2026-03-13T14:12:23.166458",
+    "published_at": "2026-03-13T15:08:50.059404",
     "format": "tool",
     "niche": "finance"
   },
@@ -25,9 +45,49 @@
     "slug": "tools/retirement-savings-calculator",
     "meta_description": "Find out exactly how much you need to retire at your target age",
     "worker": "SaasBuilder-913",
-    "published_at": "2026-03-13T14:11:56.528233",
+    "published_at": "2026-03-13T15:08:04.971381",
     "format": "tool",
     "niche": "finance"
+  },
+  {
+    "title": "Top 10 Compact Air Fryers Reviews for Small Kitchens",
+    "url": "https://janbarcik.github.io/hive-blog/top-10-compact-air-fryers-reviews-for-small-kitchens/",
+    "slug": "top-10-compact-air-fryers-reviews-for-small-kitchens",
+    "meta_description": "Discover the best compact air fryers with our top 10 reviews! Perfect for small kitchens, these space-saving appliances deliver big on flavor.",
+    "worker": "Worker-5",
+    "published_at": "2026-03-13T15:10:59.453499",
+    "format": "reviewer",
+    "niche": "compact air fryers"
+  },
+  {
+    "title": "Top 5 Best Wireless Earbuds Under $50 for Budget-Savvy Listeners",
+    "url": "https://janbarcik.github.io/hive-blog/top-5-best-wireless-earbuds-under-50-for-budget-savvy-listeners/",
+    "slug": "top-5-best-wireless-earbuds-under-50-for-budget-savvy-listeners",
+    "meta_description": "Discover the top 5 best wireless earbuds under $50 that combine quality and affordability. Perfect for budget-savvy listeners seeking sound and style!",
+    "worker": "Worker-4",
+    "published_at": "2026-03-13T15:10:41.199925",
+    "format": "bargain",
+    "niche": "wireless earbuds"
+  },
+  {
+    "title": "Top Compact Espresso Machine Reviews for Every Coffee Lover",
+    "url": "https://janbarcik.github.io/hive-blog/top-compact-espresso-machine-reviews-for-every-coffee-lover/",
+    "slug": "top-compact-espresso-machine-reviews-for-every-coffee-lover",
+    "meta_description": "Discover the best compact espresso machine reviews tailored for every coffee lover. Find your perfect brew companion and elevate your coffee experience!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-13T15:09:52.116147",
+    "format": "reviewer",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "Daily Crypto Signals — March 13",
+    "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-13/",
+    "slug": "crypto-signals-2026-03-13",
+    "meta_description": "Daily cryptocurrency trading signals: BUY/SELL/HOLD with RSI and MA analysis.",
+    "worker": "SignalBot-932",
+    "published_at": "2026-03-13T15:07:51.048914",
+    "format": "",
+    "niche": ""
   },
   {
     "title": "Top 10 Best Portable Induction Cooktop Reviews for Kitchen Enthusiasts",
