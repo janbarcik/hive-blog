@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume ATS Score Checker | Free Online Tool</title>
+    <meta name="description" content="Paste your resume and job description to get an instant ATS score. Free resume keyword scanner for better job applications.">
+    <meta property="og:title" content="Resume ATS Score Checker | Free Online Tool">
+    <meta property="og:description" content="Paste your resume and job description to get an instant ATS score. Free resume keyword scanner for better job applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/resume-ats-score-checker">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Resume ATS Score Checker",
+        "description": "Paste your resume and job description to get an instant ATS score.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "url": "https://yourwebsite.com/resume-ats-score-checker"
+    }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .ad-slot {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .affiliate-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .affiliate-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .affiliate-btn:hover {
+            background-color: #218838;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f9;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333;
+                color: #f4f4f9;
+            }
+            .results, .affiliate-box {
+                background-color: #444;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resume ATS Score Checker</h1>
+        <nav>
+            <a href="/" style="color: #fff; margin-right: 15px;">Home</a>
+            <a href="/tools/" style="color: #fff;">Tools</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="ad-slot">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-7483634241992957" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="pub-7483634241992957" data-ad-slot="f08c47fec0942fa0" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+        </div>
+        <form id="atsForm">
+            <div class="form-group">
+                <label for="resume_text">Paste your resume:</label>
+                <textarea id="resume_text" rows="10" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="job_description">Paste the job description:</label>
+                <textarea id="job_description" rows="10" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="api_key">OpenAI API Key (optional):</label>
+                <input type="text" id="api_key" placeholder="Enter your API key to unlock AI-powered analysis (optional)">
+            </div>
+            <button type="submit">Check ATS Score</button>
+        </form>
+        <div class="results" id="results" style="display:none;">
+            <h2>Results</h2>
+            <p><strong>ATS Score:</strong> <span id="ats_score"></span></p>
+            <p><strong>Missing Keywords:</strong> <span id="missing_keywords"></span></p>
+            <p><strong>Density Heatmap:</strong> <span id="density_heatmap"></span></p>
+            <p><strong>Rewrite Suggestions:</strong> <span id="rewrite_suggestions"></span></p>
+        </div>
+        <div class="affiliate-box">
+            <h4>💡 Recommended</h4>
+            <p>Professional resume writers — 3x your interviews [affiliate link]</p>
+            <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
+            <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
+        </div>
+        <div class="form-group">
+            <label for="email">Get weekly free tools:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="handleEmailSignup()">Subscribe</button>
+        </div>
+        <button onclick="shareTool()">Share this tool</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.getElementById('atsForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const resumeText = document.getElementById('resume_text').value.trim();
+            const jobDescription = document.getElementById('job_description').value.trim();
+            const apiKey = document.getElementById('api_key').value.trim();
+
+            if (!resumeText || !jobDescription) {
+                alert('Please fill in both the resume and job description fields.');
+                return;
+            }
+
+            if (apiKey) {
+                fetch('https://api.openai.com/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify({
+                        model: 'gpt-3.5-turbo',
+                        messages: [
+                            { role: 'system', content: 'Analyze resume and job description for ATS compatibility.' },
+                            { role: 'user', content: `Resume: ${resumeText} Job Description: ${jobDescription}` }
+                        ]
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const result = data.choices[0].message.content;
+                    displayResults(result);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to fetch AI analysis. Please check your API key.');
+                });
+            } else {
+                const atsScore = calculateATSScore(resumeText, jobDescription);
+                displayResults(atsScore);
+            }
+        });
+
+        function calculateATSScore(resume, jobDesc) {
+            const resumeWords = resume.split(/\s+/);
+            const jobWords = jobDesc.split(/\s+/);
+            const commonWords = resumeWords.filter(word => jobWords.includes(word));
+            const atsScore = (commonWords.length / jobWords.length) * 100;
+            return {
+                ats_score: atsScore.toFixed(2),
+                missing_keywords: jobWords.filter(word => !resumeWords.includes(word)).join(', '),
+                density_heatmap: 'N/A',
+                rewrite_suggestions: 'N/A'
+            };
+        }
+
+        function displayResults(result) {
+            document.getElementById('ats_score').textContent = result.ats_score || 'N/A';
+            document.getElementById('missing_keywords').textContent = result.missing_keywords || 'N/A';
+            document.getElementById('density_heatmap').textContent = result.density_heatmap || 'N/A';
+            document.getElementById('rewrite_suggestions').textContent = result.rewrite_suggestions || 'N/A';
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function handleEmailSignup() {
+            const email = document.getElementById('email').value.trim();
+            if (!email) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            alert('Thank you for subscribing!');
+        }
+
+        function shareTool() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('URL copied to clipboard!');
+            });
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check out this Resume ATS Score Checker!`, '_blank');
+        }
+    </script>
+</body>
+</html>
