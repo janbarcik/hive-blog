@@ -1,5 +1,85 @@
 [
   {
+    "title": "Compact Espresso Machine Buyers Guide: Choosing the Perfect Fit for Your Kitchen",
+    "url": "https://janbarcik.github.io/hive-blog/compact-espresso-machine-buyers-guide-choosing-the-perfect-fit-for-your-kitchen/",
+    "slug": "compact-espresso-machine-buyers-guide-choosing-the-perfect-fit-for-your-kitchen",
+    "meta_description": "Discover the ultimate compact espresso machine buyers guide! Find tips for selecting the perfect fit for your kitchen and enjoy cafe-quality coffee at home",
+    "worker": "Worker-3",
+    "published_at": "2026-03-13T02:10:08.582245",
+    "format": "guide",
+    "niche": "compact espresso machines"
+  },
+  {
+    "title": "Comprehensive Comparison Reviews of the Latest Wireless Earbuds",
+    "url": "https://janbarcik.github.io/hive-blog/comprehensive-comparison-reviews-of-the-latest-wireless-earbuds/",
+    "slug": "comprehensive-comparison-reviews-of-the-latest-wireless-earbuds",
+    "meta_description": "Discover our comprehensive wireless earbuds comparison reviews to find the perfect pair for your needs. Stay updated on the latest trends and features!",
+    "worker": "Worker-5",
+    "published_at": "2026-03-13T02:12:20.832541",
+    "format": "reviewer",
+    "niche": "wireless earbuds"
+  },
+  {
+    "title": "Comprehensive Guide to the Best Smart Lock Reviews for 2023",
+    "url": "https://janbarcik.github.io/hive-blog/comprehensive-guide-to-the-best-smart-lock-reviews-for-2023/",
+    "slug": "comprehensive-guide-to-the-best-smart-lock-reviews-for-2023",
+    "meta_description": "Discover the ultimate guide to the best smart lock reviews for 2023. Secure your home with top-rated options and expert insights for peace of mind!",
+    "worker": "Worker-1",
+    "published_at": "2026-03-13T02:10:35.233082",
+    "format": "reviewer",
+    "niche": "smart locks"
+  },
+  {
+    "title": "Herman Miller Aeron vs Steelcase Leap: A Comprehensive Comparison of Ergonomic Office Chairs",
+    "url": "https://janbarcik.github.io/hive-blog/herman-miller-aeron-vs-steelcase-leap-a-comprehensive-comparison-of-ergonomic-of/",
+    "slug": "herman-miller-aeron-vs-steelcase-leap-a-comprehensive-comparison-of-ergonomic-of",
+    "meta_description": "Discover the ultimate showdown: Herman Miller Aeron vs Steelcase Leap. Our comprehensive comparison reveals which ergonomic chair reigns supreme for comfor",
+    "worker": "Worker-2",
+    "published_at": "2026-03-13T02:10:29.264994",
+    "format": "comparator",
+    "niche": "ergonomic office chairs"
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-13T02:08:59.608248",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Mortgage Payoff Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
+    "slug": "tools/mortgage-payoff-calculator",
+    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-13T02:09:36.022510",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
+    "title": "Top 5 Robotic Vacuums Under $50 for Budget-Conscious Buyers",
+    "url": "https://janbarcik.github.io/hive-blog/top-5-robotic-vacuums-under-50-for-budget-conscious-buyers/",
+    "slug": "top-5-robotic-vacuums-under-50-for-budget-conscious-buyers",
+    "meta_description": "Discover the best robotic vacuum under $50 with our top 5 picks! Affordable, efficient, and perfect for budget-conscious buyers. Clean smarter today!",
+    "worker": "Worker-4",
+    "published_at": "2026-03-13T02:12:04.981930",
+    "format": "bargain",
+    "niche": "robotic vacuum cleaners"
+  },
+  {
+    "title": "Yale Assure Lock SL vs Schlage Sense: Which Smart Lock is Right for You?",
+    "url": "https://janbarcik.github.io/hive-blog/yale-assure-lock-sl-vs-schlage-sense-which-smart-lock-is-right-for-you/",
+    "slug": "yale-assure-lock-sl-vs-schlage-sense-which-smart-lock-is-right-for-you",
+    "meta_description": "Discover the best smart lock for your home! Compare Yale Assure Lock SL vs Schlage Sense and find out which features suit your needs.",
+    "worker": "Worker-6",
+    "published_at": "2026-03-13T02:12:35.619846",
+    "format": "comparator",
+    "niche": "smart locks"
+  },
+  {
     "title": "Daily Crypto Signals — March 13",
     "url": "https://janbarcik.github.io/hive-blog/crypto-signals-2026-03-13/",
     "slug": "crypto-signals-2026-03-13",
@@ -88,26 +168,6 @@
     "published_at": "2026-03-10T18:43:21.246312",
     "format": "comparator",
     "niche": "ergonomic office chairs"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-10T18:42:09.112804",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Mortgage Payoff Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/mortgage-payoff-calculator/",
-    "slug": "tools/mortgage-payoff-calculator",
-    "meta_description": "See how extra payments slash your mortgage timeline and total interest",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-10T18:42:41.123750",
-    "format": "tool",
-    "niche": "finance"
   },
   {
     "title": "Top 10 Best Compact Espresso Machines: Reviews and Buyer’s Guide",
