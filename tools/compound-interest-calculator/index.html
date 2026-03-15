@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Compound Interest Calculator – Visualize Investment Growth Over Time</title>
 <meta name="description" content="Free compound interest calculator. See exactly how your money grows with compound interest, monthly contributions, and year-by-year charts. Plan your financial future today.">
+<meta name="keywords" content="compound interest calculator, investment growth calculator, savings calculator, compound interest formula, financial planning tool">
 <meta property="og:title" content="Compound Interest Calculator – Visualize Investment Growth">
-<meta property="og:description" content="Calculate compound interest with monthly contributions. Interactive charts, year-by-year breakdown, and comparison tables.">
+<meta property="og:description" content="Calculate and visualize how your investments grow with compound interest over time. Includes monthly contributions and year-by-year breakdown.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yoursite.com/tools/compound-interest-calculator">
 <meta property="og:image" content="https://yoursite.com/og-compound-interest.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Compound Interest Calculator">
 <meta name="twitter:description" content="Visualize exactly how your money grows with compound interest over time.">
-<meta name="keywords" content="compound interest calculator, investment growth calculator, savings calculator, interest calculator, financial planning">
 <link rel="canonical" href="https://yoursite.com/tools/compound-interest-calculator">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Compound Interest Calculator",
-  "description": "Visualize exactly how your money grows with compound interest over time. Includes monthly contributions, year-by-year charts, and comparison tables.",
+  "description": "Calculate and visualize compound interest growth with monthly contributions and year-by-year breakdown charts.",
   "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web",
+  "operatingSystem": "Web Browser",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -36,26 +36,21 @@
   :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
-    --primary-light: #dbeafe;
+    --primary-light: #eff6ff;
     --secondary: #10b981;
-    --secondary-light: #d1fae5;
+    --secondary-light: #ecfdf5;
     --accent: #f59e0b;
-    --accent-light: #fef3c7;
     --danger: #ef4444;
-    --danger-light: #fee2e2;
-    --bg: #f8fafc;
-    --surface: #ffffff;
-    --surface2: #f1f5f9;
-    --border: #e2e8f0;
     --text: #1e293b;
     --text-muted: #64748b;
-    --text-light: #94a3b8;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-    --shadow: 0 4px 16px rgba(0,0,0,0.10);
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
     --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
     --radius: 12px;
     --radius-sm: 8px;
-    --radius-lg: 16px;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -65,25 +60,20 @@
       --secondary: #10b981;
       --secondary-light: #064e3b;
       --accent: #f59e0b;
-      --accent-light: #451a03;
       --danger: #f87171;
-      --danger-light: #450a0a;
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --surface2: #0f172a;
-      --border: #334155;
       --text: #f1f5f9;
       --text-muted: #94a3b8;
-      --text-light: #64748b;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-      --shadow: 0 4px 16px rgba(0,0,0,0.4);
-      --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+      --bg: #0f172a;
+      --card: #1e293b;
+      --border: #334155;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
     }
   }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font);
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -94,13 +84,13 @@
 
   /* NAV */
   nav {
-    background: var(--surface);
+    background: var(--card);
     border-bottom: 1px solid var(--border);
     padding: 0 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
   .nav-inner {
     max-width: 1100px;
@@ -109,7 +99,6 @@
     align-items: center;
     justify-content: space-between;
     height: 56px;
-    gap: 1rem;
   }
   .nav-logo {
     font-weight: 700;
@@ -118,15 +107,14 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    white-space: nowrap;
   }
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
+  .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+  .nav-links a {
+    color: var(--text-muted);
     font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
   }
-  .nav-links a { color: var(--text-muted); font-weight: 500; }
   .nav-links a:hover { color: var(--primary); text-decoration: none; }
 
   /* LAYOUT */
@@ -135,47 +123,37 @@
     margin: 0 auto;
     padding: 0 1rem;
   }
+
+  /* HERO */
   .hero {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #0ea5e9 100%);
+    color: white;
+    padding: 3rem 1rem 2.5rem;
     text-align: center;
-    padding: 2.5rem 1rem 1.5rem;
   }
   .hero h1 {
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
     font-weight: 800;
-    color: var(--text);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     line-height: 1.2;
   }
   .hero p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    max-width: 560px;
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    opacity: 0.9;
+    max-width: 600px;
     margin: 0 auto;
-  }
-  .badge {
-    display: inline-block;
-    background: var(--primary-light);
-    color: var(--primary);
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.2rem 0.7rem;
-    border-radius: 99px;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
   }
 
   /* AD SLOT */
   .ad-slot {
-    background: var(--surface2);
+    background: var(--card);
     border: 1px dashed var(--border);
     border-radius: var(--radius-sm);
-    text-align: center;
     padding: 1rem;
-    color: var(--text-light);
+    text-align: center;
+    color: var(--text-muted);
     font-size: 0.8rem;
-    margin: 1rem auto;
-    max-width: 728px;
+    margin: 1.5rem 0;
     min-height: 90px;
     display: flex;
     align-items: center;
@@ -187,8 +165,8 @@
     display: grid;
     grid-template-columns: 380px 1fr;
     gap: 1.5rem;
+    padding: 2rem 0;
     align-items: start;
-    padding-bottom: 3rem;
   }
   @media (max-width: 800px) {
     .main-grid { grid-template-columns: 1fr; }
@@ -196,20 +174,20 @@
 
   /* CARD */
   .card {
-    background: var(--surface);
+    background: var(--card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius);
     padding: 1.5rem;
     box-shadow: var(--shadow);
   }
   .card-title {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    color: var(--text);
     margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--text);
   }
 
   /* FORM */
@@ -220,7 +198,8 @@
     font-weight: 600;
     color: var(--text-muted);
     margin-bottom: 0.35rem;
-    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
   .input-wrap {
     position: relative;
@@ -229,33 +208,35 @@
   }
   .input-prefix, .input-suffix {
     position: absolute;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-muted);
     pointer-events: none;
-    z-index: 1;
   }
   .input-prefix { left: 0.75rem; }
   .input-suffix { right: 0.75rem; }
   input[type="number"], select {
     width: 100%;
-    padding: 0.65rem 0.9rem;
+    padding: 0.65rem 0.85rem;
     border: 1.5px solid var(--border);
     border-radius: var(--radius-sm);
-    background: var(--surface);
+    font-size: 1rem;
+    font-family: var(--font);
+    background: var(--bg);
     color: var(--text);
-    font-size: 0.95rem;
     transition: border-color 0.2s, box-shadow 0.2s;
-    appearance: none;
-    -webkit-appearance: none;
+    -moz-appearance: textfield;
   }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
   input[type="number"]:focus, select:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
   }
-  .has-prefix input { padding-left: 2rem; }
-  .has-suffix input { padding-right: 2.2rem; }
+  input.has-prefix { padding-left: 2rem; }
+  input.has-suffix { padding-right: 2.2rem; }
+  input.error { border-color: var(--danger); }
   .error-msg {
     color: var(--danger);
     font-size: 0.78rem;
@@ -263,7 +244,6 @@
     display: none;
   }
   .error-msg.show { display: block; }
-  input.invalid { border-color: var(--danger); }
 
   /* RANGE SLIDER */
   .range-wrap { margin-top: 0.4rem; }
@@ -271,13 +251,12 @@
     width: 100%;
     accent-color: var(--primary);
     cursor: pointer;
-    height: 4px;
   }
   .range-labels {
     display: flex;
     justify-content: space-between;
     font-size: 0.72rem;
-    color: var(--text-light);
+    color: var(--text-muted);
     margin-top: 0.2rem;
   }
 
@@ -289,43 +268,40 @@
     gap: 0.4rem;
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius-sm);
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     border: none;
     transition: all 0.2s;
-    width: 100%;
+    font-family: var(--font);
   }
   .btn-primary {
     background: var(--primary);
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(37,99,235,0.25);
+    color: white;
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 0.85rem;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.3);
   }
-  .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(37,99,235,0.3); }
+  .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37,99,235,0.4);
+  }
   .btn-primary:active { transform: translateY(0); }
   .btn-secondary {
-    background: var(--surface2);
+    background: var(--bg);
     color: var(--text-muted);
     border: 1.5px solid var(--border);
     font-size: 0.85rem;
-    padding: 0.55rem 1rem;
-    width: auto;
+    padding: 0.5rem 1rem;
   }
-  .btn-secondary:hover { background: var(--border); color: var(--text); }
+  .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
   .btn-share {
     background: #1da1f2;
-    color: #fff;
+    color: white;
     font-size: 0.85rem;
-    padding: 0.55rem 1rem;
-    width: auto;
-    border-radius: var(--radius-sm);
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-weight: 600;
-    transition: all 0.2s;
+    padding: 0.5rem 1rem;
   }
   .btn-share:hover { background: #0c85d0; }
 
@@ -348,46 +324,49 @@
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
-  @media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .summary-grid { grid-template-columns: 1fr; }
+  }
   .summary-card {
-    background: var(--surface);
+    background: var(--card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 1.1rem 1.25rem;
+    padding: 1.25rem;
     text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
   }
-  .summary-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-  .summary-card.highlight {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border-color: var(--primary);
-    color: #fff;
+  .summary-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
   }
-  .summary-card.highlight .summary-label { color: rgba(255,255,255,0.8); }
-  .summary-card.green { border-top: 3px solid var(--secondary); }
-  .summary-card.amber { border-top: 3px solid var(--accent); }
+  .summary-card.final::before { background: var(--primary); }
+  .summary-card.interest::before { background: var(--secondary); }
+  .summary-card.growth::before { background: var(--accent); }
   .summary-label {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.35rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
   }
   .summary-value {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
     font-weight: 800;
-    color: var(--text);
     line-height: 1.1;
   }
-  .summary-card.highlight .summary-value { color: #fff; }
+  .summary-card.final .summary-value { color: var(--primary); }
+  .summary-card.interest .summary-value { color: var(--secondary); }
+  .summary-card.growth .summary-value { color: var(--accent); }
   .summary-sub {
-    font-size: 0.75rem;
-    color: var(--text-light);
-    margin-top: 0.2rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
   }
-  .summary-card.highlight .summary-sub { color: rgba(255,255,255,0.7); }
 
   /* CHART */
   .chart-container {
@@ -396,34 +375,46 @@
     margin-bottom: 1.5rem;
   }
 
-  /* TABLE */
-  .table-wrap {
+  /* TABS */
+  .tabs {
+    display: flex;
+    gap: 0.25rem;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 1.25rem;
     overflow-x: auto;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.85rem;
-  }
-  thead { background: var(--surface2); }
-  th {
-    padding: 0.65rem 0.9rem;
-    text-align: right;
-    font-weight: 700;
+  .tab-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 600;
     color: var(--text-muted);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
     white-space: nowrap;
+    font-family: var(--font);
+    transition: all 0.2s;
   }
+  .tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+  .tab-btn:hover { color: var(--primary); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  thead { background: var(--primary); color: white; }
+  th { padding: 0.7rem 0.9rem; text-align: right; font-weight: 600; white-space: nowrap; }
   th:first-child { text-align: left; }
-  td {
-    padding: 0.6rem 0.9rem;
-    text-align: right;
-    border-top: 1px solid var(--border);
-    color: var(--text);
-  }
+  td { padding: 0.65rem 0.9rem; text-align: right; border-bottom: 1px solid var(--border); }
   td:first-child { text-align: left; font-weight: 600; }
-  tr:
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: rgba(37,99,235,0.03); }
+  tr:hover td { background: var(--primary-light); }
+
+  /* COMPARISON TABLE */
