@@ -1,5 +1,15 @@
 [
   {
+    "title": "Resume ATS Score Checker",
+    "url": "https://janbarcik.github.io/hive-blog/tools/resume-ats-score-checker/",
+    "slug": "tools/resume-ats-score-checker",
+    "meta_description": "Paste your resume + job description — get an instant ATS score",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-15T22:59:59.655492",
+    "format": "tool",
+    "niche": "career"
+  },
+  {
     "title": "Calorie Deficit & Macro Calculator",
     "url": "https://janbarcik.github.io/hive-blog/tools/calorie-deficit-macro-calculator/",
     "slug": "tools/calorie-deficit-macro-calculator",
@@ -48,16 +58,6 @@
     "published_at": "2026-03-15T21:50:14.958591",
     "format": "tool",
     "niche": "finance"
-  },
-  {
-    "title": "Resume ATS Score Checker",
-    "url": "https://janbarcik.github.io/hive-blog/tools/resume-ats-score-checker/",
-    "slug": "tools/resume-ats-score-checker",
-    "meta_description": "Paste your resume + job description — get an instant ATS score",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-15T21:36:26.520824",
-    "format": "tool",
-    "niche": "career"
   },
   {
     "title": "Email Subject Line Scorer",
