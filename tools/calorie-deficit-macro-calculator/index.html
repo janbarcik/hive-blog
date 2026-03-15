@@ -1,306 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorie Deficit & Macro Calculator</title>
-    <meta name="description" content="Calculate your daily calorie target, protein, carbs, and fat breakdown for weight loss, maintenance, or gain.">
-    <meta property="og:title" content="Calorie Deficit & Macro Calculator">
-    <meta property="og:description" content="Get your daily calorie target, protein, carbs, and fat breakdown.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/calorie-macro-calculator">
-    <meta property="og:image" content="https://example.com/og-image.jpg">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Calorie Deficit & Macro Calculator",
-      "description": "Calculate your daily calorie target, protein, carbs, and fat breakdown.",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "All",
-      "url": "https://example.com/calorie-macro-calculator"
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorie Deficit & Macro Calculator | Free TDEE & Weight Loss Tool</title>
+<meta name="description" content="Calculate your daily calorie target, TDEE, and macro breakdown (protein, carbs, fat) for weight loss, maintenance, or muscle gain. Free calorie deficit calculator.">
+<meta property="og:title" content="Calorie Deficit & Macro Calculator">
+<meta property="og:description" content="Get your personalized daily calorie target and macro breakdown for your fitness goals. Free TDEE calculator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/tools/calorie-deficit-macro-calculator">
+<meta property="og:image" content="https://example.com/og-calorie-calculator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calorie Deficit & Macro Calculator">
+<meta name="twitter:description" content="Free tool to calculate your TDEE, calorie deficit, and macro breakdown for weight loss or muscle gain.">
+<meta name="keywords" content="calorie deficit calculator, macro calculator for weight loss, TDEE calculator, protein carbs fat calculator, weight loss calories">
+<link rel="canonical" href="https://example.com/tools/calorie-deficit-macro-calculator">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Calorie Deficit & Macro Calculator",
+  "description": "Calculate your daily calorie target, TDEE, and macro breakdown for weight loss, maintenance, or muscle gain.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://example.com/tools/calorie-deficit-macro-calculator"
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --primary-light: #818cf8;
+    --secondary: #06b6d4;
+    --accent: #f59e0b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface2: #f1f5f9;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface2: #334155;
+      --border: #334155;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-light: #64748b;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.4);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
     }
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header, footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .ad-slot {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button {
-            background: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-        .results {
-            margin-top: 20px;
-            padding: 15px;
-            background: #e9ecef;
-        }
-        .affiliate-box {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-        }
-        .affiliate-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #28a745;
-            color: #fff;
-            text-decoration: none;
-        }
-        .affiliate-btn:hover {
-            background: #218838;
-        }
-        .email-capture {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-        }
-        .share-buttons {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .share-buttons button {
-            margin: 5px;
-        }
-        nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #007bff;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #e0e0e0;
-            }
-            .container, .results, .affiliate-box, .email-capture {
-                background: #1e1e1e;
-                color: #e0e0e0;
-            }
-            button, .affiliate-btn {
-                background: #bb86fc;
-            }
-            button:hover, .affiliate-btn:hover {
-                background: #3700b3;
-            }
-            nav a {
-                color: #bb86fc;
-            }
-        }
-        @media print {
-            body {
-                color: #000;
-                background: #fff;
-            }
-            .container, .results, .affiliate-box, .email-capture {
-                background: #fff;
-                color: #000;
-                box-shadow: none;
-            }
-            .ad-slot, .email-capture, .share-buttons, nav {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Calorie Deficit & Macro Calculator</h1>
-    </header>
-    <div class="container">
-        <nav>
-            <a href="/">Home</a>
-            <a href="/tools/">Tools</a>
-        </nav>
-        <div class="ad-slot"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-7483634241992957" crossorigin="anonymous"></script>
-<ins class="adsbygoogle" style="display:block" data-ad-client="pub-7483634241992957" data-ad-slot="f08c47fec0942fa0" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-        <form id="calculator-form">
-            <div class="form-group">
-                <label for="weight_kg">Weight (kg):</label>
-                <input type="number" id="weight_kg" required>
-            </div>
-            <div class="form-group">
-                <label for="height_cm">Height (cm):</label>
-                <input type="number" id="height_cm" required>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select id="gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="activity_level">Activity Level:</label>
-                <select id="activity_level" required>
-                    <option value="sedentary">Sedentary</option>
-                    <option value="light">Lightly active</option>
-                    <option value="moderate">Moderately active</option>
-                    <option value="active">Very active</option>
-                    <option value="extra">Extra active</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="goal">Goal:</label>
-                <select id="goal" required>
-                    <option value="lose">Lose weight</option>
-                    <option value="maintain">Maintain weight</option>
-                    <option value="gain">Gain weight</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="weekly_rate">Weekly Rate (kg):</label>
-                <input type="number" id="weekly_rate" step="0.1" required>
-            </div>
-            <button type="button" onclick="calculate()">Calculate</button>
-        </form>
-        <div class="results" id="results" style="display:none;">
-            <h3>Results</h3>
-            <p id="tdee"></p>
-            <p id="deficit_calories"></p>
-            <p id="macro_breakdown_grams"></p>
-            <p id="weekly_projections"></p>
-        </div>
-        <div class="affiliate-box">
-            <h4>💡 Recommended</h4>
-            <p>Best protein powders ranked by nutritionists [affiliate link]</p>
-            <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
-            <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
-        </div>
-        <div class="email-capture">
-            <h4>Get weekly free tools</h4>
-            <form onsubmit="handleEmailSignup(event)">
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-        <div class="share-buttons">
-            <button onclick="share()">Share this tool</button>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2023 Health Tools</p>
-    </footer>
-    <script>
-        function calculate() {
-            const weight = parseFloat(document.getElementById('weight_kg').value);
-            const height = parseFloat(document.getElementById('height_cm').value);
-            const age = parseInt(document.getElementById('age').value);
-            const gender = document.getElementById('gender').value;
-            const activityLevel = document.getElementById('activity_level').value;
-            const goal = document.getElementById('goal').value;
-            const weeklyRate = parseFloat(document.getElementById('weekly_rate').value);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-            if (isNaN(weight) || isNaN(height) || isNaN(age) || isNaN(weeklyRate)) {
-                alert('Please fill out all fields correctly.');
-                return;
-            }
+  /* NAV */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+  }
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--primary); text-decoration: none; }
 
-            let bmr;
-            if (gender === 'male') {
-                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-            } else {
-                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
-            }
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 50%, var(--secondary) 100%);
+    color: white;
+    padding: 3rem 1rem 2.5rem;
+    text-align: center;
+  }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 0.75rem; }
+  .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 560px; margin: 0 auto; }
+  .hero-badges {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .badge {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
 
-            const activityMultipliers = {
-                sedentary: 1.2,
-                light: 1.375,
-                moderate: 1.55,
-                active: 1.725,
-                extra: 1.9
-            };
+  /* MAIN LAYOUT */
+  .container { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem; }
 
-            const tdee = bmr * activityMultipliers[activityLevel];
-            let calorieAdjustment = 0;
+  /* AD SLOT */
+  .ad-slot {
+    background: var(--surface2);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-            if (goal === 'lose') {
-                calorieAdjustment = -7700 * weeklyRate / 7;
-            } else if (goal === 'gain') {
-                calorieAdjustment = 7700 * weeklyRate / 7;
-            }
+  /* CARD */
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-            const deficitCalories = tdee + calorieAdjustment;
-            const protein = weight * 2;
-            const fat = weight * 0.8;
-            const carbs = (deficitCalories - (protein * 4 + fat * 9)) / 4;
+  /* FORM */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .form-group input,
+  .form-group select {
+    padding: 0.65rem 0.9rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+  }
+  .form-group input.error { border-color: var(--danger); }
+  .error-msg {
+    color: var(--danger);
+    font-size: 0.78rem;
+    font-weight: 500;
+    display: none;
+  }
+  .error-msg.show { display: block; }
 
-            document.getElementById('tdee').innerText = `TDEE: ${tdee.toFixed(2)} kcal/day`;
-            document.getElementById('deficit_calories').innerText = `Calorie Target: ${deficitCalories.toFixed(2)} kcal/day`;
-            document.getElementById('macro_breakdown_grams').innerText = `Macros: Protein: ${protein.toFixed(2)}g, Carbs: ${carbs.toFixed(2)}g, Fat: ${fat.toFixed(2)}g`;
-            document.getElementById('weekly_projections').innerText = `Weekly Projections: ${goal === 'maintain' ? 'Maintain weight' : goal === 'lose' ? `Lose ${weeklyRate} kg` : `Gain ${weeklyRate} kg`}`;
+  /* RADIO GROUP */
+  .radio-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .radio-btn {
+    flex: 1;
+    min-width: 80px;
+    position: relative;
+  }
+  .radio-btn input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .radio-btn label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.5rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .radio-btn input:checked + label {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+  }
+  .radio-btn label:hover { border-color: var(--primary-light); }
 
-            document.getElementById('results').style.display = 'block';
-        }
+  /* BUTTON */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), #7c3aed);
+    color: white;
+    box-shadow: 0 4px 14px rgba(79,70,229,0.4);
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79,70,229,0.5);
+  }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .btn-secondary:hover { background: var(--border); }
+  .btn-share {
+    background: #1da1f2;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .btn-share:hover { background: #0c85d0; }
 
-        function handleEmailSignup(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            alert(`Thank you for subscribing with ${email}!`);
-        }
+  /* RESULTS */
+  #results { display: none; }
+  .results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .results-title { font-size: 1.3rem; font-weight: 800; }
+  .results-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
-        function share() {
-            const url = window.location.href;
-            const twitterIntent = `https://twitter.com/intent/tweet?text=Check out this Calorie Deficit & Macro Calculator! ${url}`;
-            navigator.clipboard.writeText(url).then(() => {
-                alert('URL copied to clipboard!');
-            });
-            window.open(twitterIntent, '_blank');
-        }
-    </script>
-</body>
-</html>
+  /* STAT CARDS */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .stat-card.blue::before { background: var(--primary); }
+  .stat-card.green::before { background: var(--success); }
+  .stat-card.orange::before { background: var(--accent); }
+  .stat-card.cyan::before { background: var(--secondary); }
+  .stat-card.red::before { background: var(--danger); }
+  .stat-value {
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+  .stat-card.blue .stat-value { color: var(--primary); }
+  .stat-card.green .stat-value { color: var(--success); }
+  .stat-card.orange .stat-value { color: var(--accent); }
+  .stat-card.cyan .stat-value { color: var(--secondary); }
+  .stat-card.red .stat-value { color: var(--danger); }
+  .stat-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-sub { font-size: 0.75rem; color: var(--text-light); margin-top: 0.2rem; }
+
+  /* MACRO BARS */
+  .macro-section { margin-bottom: 1.5rem; }
+  .macro-bar-wrap { margin-bottom: 1rem; }
+  .macro-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.35rem;
+  }
+  .macro-name { font-weight: 700; font-size: 0.95rem; }
+  .macro-grams { font-size: 0.85rem; color: var(--text-muted); }
+  .macro-bar-bg {
+    height: 12px;
+    background: var(--surface2);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .macro-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+  }
+  .macro-bar-fill.protein { background: linear-gradient(90deg, #4f46e5, #818cf8); }
+  .macro-bar-fill.carbs { background: linear-gradient(90deg, #f59e0b, #fcd34d); }
+  .macro-bar-fill.fat { background: linear-gradient(90deg, #ef4444, #fca5a5); }
+
+  /* CHART */
+  .chart-container {
+    position: relative;
+    height: 260px;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  /* PROJECTION TABLE */
+  .projection-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .projection-table th {
+    background: var(--surface2);
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform
