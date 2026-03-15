@@ -1,5 +1,15 @@
 [
   {
+    "title": "Compound Interest Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
+    "slug": "tools/compound-interest-calculator",
+    "meta_description": "Visualize exactly how your money grows with compound interest over time",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-15T19:56:16.617427",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
     "title": "Debt Snowball Planner",
     "url": "https://janbarcik.github.io/hive-blog/tools/debt-snowball-planner/",
     "slug": "tools/debt-snowball-planner",
@@ -106,16 +116,6 @@
     "meta_description": "See how extra payments slash your mortgage timeline and total interest",
     "worker": "SaasBuilder-913",
     "published_at": "2026-03-13T23:54:53.789831",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/compound-interest-calculator/",
-    "slug": "tools/compound-interest-calculator",
-    "meta_description": "Visualize exactly how your money grows with compound interest over time",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-13T23:54:28.766212",
     "format": "tool",
     "niche": "finance"
   },

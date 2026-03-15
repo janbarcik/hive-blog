@@ -1,282 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compound Interest Calculator | Investment Growth Calculator</title>
-    <meta name="description" content="Visualize exactly how your money grows with compound interest over time using our Compound Interest Calculator.">
-    <meta property="og:title" content="Compound Interest Calculator">
-    <meta property="og:description" content="Visualize exactly how your money grows with compound interest over time.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/compound-interest-calculator">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Compound Interest Calculator",
-      "description": "Visualize exactly how your money grows with compound interest over time.",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "url": "https://example.com/compound-interest-calculator"
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Interest Calculator – Visualize Investment Growth Over Time</title>
+<meta name="description" content="Free compound interest calculator. See exactly how your money grows with compound interest, monthly contributions, and year-by-year charts. Plan your financial future today.">
+<meta property="og:title" content="Compound Interest Calculator – Visualize Investment Growth">
+<meta property="og:description" content="Calculate compound interest with monthly contributions. Interactive charts, year-by-year breakdown, and comparison tables.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yoursite.com/tools/compound-interest-calculator">
+<meta property="og:image" content="https://yoursite.com/og-compound-interest.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compound Interest Calculator">
+<meta name="twitter:description" content="Visualize exactly how your money grows with compound interest over time.">
+<meta name="keywords" content="compound interest calculator, investment growth calculator, savings calculator, interest calculator, financial planning">
+<link rel="canonical" href="https://yoursite.com/tools/compound-interest-calculator">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Compound Interest Calculator",
+  "description": "Visualize exactly how your money grows with compound interest over time. Includes monthly contributions, year-by-year charts, and comparison tables.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://yoursite.com/tools/compound-interest-calculator"
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #dbeafe;
+    --secondary: #10b981;
+    --secondary-light: #d1fae5;
+    --accent: #f59e0b;
+    --accent-light: #fef3c7;
+    --danger: #ef4444;
+    --danger-light: #fee2e2;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface2: #f1f5f9;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow: 0 4px 16px rgba(0,0,0,0.10);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --primary-light: #1e3a5f;
+      --secondary: #10b981;
+      --secondary-light: #064e3b;
+      --accent: #f59e0b;
+      --accent-light: #451a03;
+      --danger: #f87171;
+      --danger-light: #450a0a;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface2: #0f172a;
+      --border: #334155;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-light: #64748b;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow: 0 4px 16px rgba(0,0,0,0.4);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
     }
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        header, footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .ad-slot {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .results {
-            margin-top: 20px;
-        }
-        .affiliate-box {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f0f8ff;
-            border: 1px solid #ddd;
-        }
-        .affiliate-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .share-btn {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #1da1f2;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .email-capture {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #e9ecef;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-        .email-capture input {
-            width: 70%;
-            padding: 8px;
-            margin-right: 5px;
-        }
-        .email-capture button {
-            padding: 8px 15px;
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #e0e0e0;
-            }
-            .container {
-                background-color: #1e1e1e;
-            }
-            .affiliate-box {
-                background-color: #2a2a2a;
-            }
-        }
-        @media print {
-            .affiliate-box, .email-capture, .share-btn, .ad-slot {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/tools/">Tools</a>
-        </nav>
-    </header>
-    <div class="container">
-        <h1>Compound Interest Calculator</h1>
-        <div class="ad-slot"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-7483634241992957" crossorigin="anonymous"></script>
-<ins class="adsbygoogle" style="display:block" data-ad-client="pub-7483634241992957" data-ad-slot="f08c47fec0942fa0" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-        <form id="calculator-form">
-            <div class="form-group">
-                <label for="principal">Principal Amount ($):</label>
-                <input type="number" id="principal" required min="0" step="0.01">
-            </div>
-            <div class="form-group">
-                <label for="annual_rate_pct">Annual Interest Rate (%):</label>
-                <input type="number" id="annual_rate_pct" required min="0" step="0.01">
-            </div>
-            <div class="form-group">
-                <label for="years">Number of Years:</label>
-                <input type="number" id="years" required min="1" step="1">
-            </div>
-            <div class="form-group">
-                <label for="compound_frequency">Compound Frequency:</label>
-                <select id="compound_frequency" required>
-                    <option value="1">Annually</option>
-                    <option value="4">Quarterly</option>
-                    <option value="12">Monthly</option>
-                    <option value="365">Daily</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="monthly_contribution">Monthly Contribution ($):</label>
-                <input type="number" id="monthly_contribution" required min="0" step="0.01">
-            </div>
-            <button type="button" onclick="calculateCompoundInterest()">Calculate</button>
-        </form>
-        <div class="results" id="results">
-            <!-- Results will be displayed here -->
-        </div>
-        <div class="affiliate-box">
-            <h4>💡 Recommended</h4>
-            <p>Best brokerage accounts to maximize your returns [affiliate link]</p>
-            <a href="#affiliate-placeholder" class="affiliate-btn" target="_blank" rel="noopener sponsored">See Top Picks →</a>
-            <small>Affiliate disclosure: We earn a small commission at no cost to you.</small>
-        </div>
-        <div class="email-capture">
-            <p>Get weekly free tools</p>
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <button onclick="handleEmailSignup()">Subscribe</button>
-        </div>
-        <a href="#" class="share-btn" onclick="shareTool()">Share this tool</a>
-    </div>
-    <footer>
-        <p>&copy; 2023 Compound Interest Calculator</p>
-    </footer>
-    <script>
-        function calculateCompoundInterest() {
-            const principal = parseFloat(document.getElementById('principal').value);
-            const annualRatePct = parseFloat(document.getElementById('annual_rate_pct').value);
-            const years = parseInt(document.getElementById('years').value);
-            const compoundFrequency = parseInt(document.getElementById('compound_frequency').value);
-            const monthlyContribution = parseFloat(document.getElementById('monthly_contribution').value);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-            if (isNaN(principal) || isNaN(annualRatePct) || isNaN(years) || isNaN(compoundFrequency) || isNaN(monthlyContribution)) {
-                alert('Please enter valid numbers for all fields.');
-                return;
-            }
+  /* NAV */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    gap: 1rem;
+  }
+  .nav-logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 0.9rem;
+  }
+  .nav-links a { color: var(--text-muted); font-weight: 500; }
+  .nav-links a:hover { color: var(--primary); text-decoration: none; }
 
-            const annualRate = annualRatePct / 100;
-            const results = [];
-            let totalAmount = principal;
-            let totalInterest = 0;
+  /* LAYOUT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .hero {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.7rem;
+    border-radius: 99px;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 
-            for (let i = 1; i <= years; i++) {
-                for (let j = 0; j < compoundFrequency; j++) {
-                    totalAmount += monthlyContribution * 12 / compoundFrequency;
-                    const interest = totalAmount * (annualRate / compoundFrequency);
-                    totalAmount += interest;
-                    totalInterest += interest;
-                }
-                results.push({ year: i, amount: totalAmount.toFixed(2) });
-            }
+  /* AD SLOT */
+  .ad-slot {
+    background: var(--surface2);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin: 1rem auto;
+    max-width: 728px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-            displayResults(totalAmount, totalInterest, results);
-        }
+  /* MAIN GRID */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding-bottom: 3rem;
+  }
+  @media (max-width: 800px) {
+    .main-grid { grid-template-columns: 1fr; }
+  }
 
-        function displayResults(finalAmount, totalInterest, results) {
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `
-                <h2>Results</h2>
-                <p>Final Amount: $${finalAmount.toFixed(2)}</p>
-                <p>Total Interest: $${totalInterest.toFixed(2)}</p>
-                <canvas id="growthChart" width="400" height="200"></canvas>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Year</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${results.map(result => `<tr><td>${result.year}</td><td>$${result.amount}</td></tr>`).join('')}
-                    </tbody>
-                </table>
-            `;
+  /* CARD */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-            const ctx = document.getElementById('growthChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: results.map(result => `Year ${result.year}`),
-                    datasets: [{
-                        label: 'Investment Growth',
-                        data: results.map(result => result.amount),
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 2,
-                        fill: false
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
-            });
-        }
+  /* FORM */
+  .form-group { margin-bottom: 1.1rem; }
+  label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.02em;
+  }
+  .input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .input-prefix, .input-suffix {
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .input-prefix { left: 0.75rem; }
+  .input-suffix { right: 0.75rem; }
+  input[type="number"], select {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+  }
+  .has-prefix input { padding-left: 2rem; }
+  .has-suffix input { padding-right: 2.2rem; }
+  .error-msg {
+    color: var(--danger);
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+    display: none;
+  }
+  .error-msg.show { display: block; }
+  input.invalid { border-color: var(--danger); }
 
-        function handleEmailSignup() {
-            const email = document.getElementById('email').value;
-            if (email) {
-                alert(`Thank you for subscribing with ${email}!`);
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        }
+  /* RANGE SLIDER */
+  .range-wrap { margin-top: 0.4rem; }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--primary);
+    cursor: pointer;
+    height: 4px;
+  }
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+  }
 
-        function shareTool() {
-            const url = window.location.href;
-            const twitterIntent = `https://twitter.com/intent/tweet?text=Check out this Compound Interest Calculator!&url=${encodeURIComponent(url)}`;
-            navigator.clipboard.writeText(url).then(() => {
-                alert('URL copied to clipboard!');
-                window.open(twitterIntent, '_blank');
-            });
-        }
-    </script>
-</body>
-</html>
+  /* BUTTON */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.25);
+  }
+  .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(37,99,235,0.3); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: var(--surface2);
+    color: var(--text-muted);
+    border: 1.5px solid var(--border);
+    font-size: 0.85rem;
+    padding: 0.55rem 1rem;
+    width: auto;
+  }
+  .btn-secondary:hover { background: var(--border); color: var(--text); }
+  .btn-share {
+    background: #1da1f2;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0.55rem 1rem;
+    width: auto;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .btn-share:hover { background: #0c85d0; }
+
+  /* RESULTS */
+  #results { display: none; }
+  .results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .results-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  /* SUMMARY CARDS */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } }
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+  }
+  .summary-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .summary-card.highlight {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-color: var(--primary);
+    color: #fff;
+  }
+  .summary-card.highlight .summary-label { color: rgba(255,255,255,0.8); }
+  .summary-card.green { border-top: 3px solid var(--secondary); }
+  .summary-card.amber { border-top: 3px solid var(--accent); }
+  .summary-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+  }
+  .summary-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .summary-card.highlight .summary-value { color: #fff; }
+  .summary-sub {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+  }
+  .summary-card.highlight .summary-sub { color: rgba(255,255,255,0.7); }
+
+  /* CHART */
+  .chart-container {
+    position: relative;
+    height: 320px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* TABLE */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  thead { background: var(--surface2); }
+  th {
+    padding: 0.65rem 0.9rem;
+    text-align: right;
+    font-weight: 700;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  th:first-child { text-align: left; }
+  td {
+    padding: 0.6rem 0.9rem;
+    text-align: right;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+  }
+  td:first-child { text-align: left; font-weight: 600; }
+  tr:
