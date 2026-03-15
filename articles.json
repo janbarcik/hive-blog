@@ -1,5 +1,15 @@
 [
   {
+    "title": "Retirement Savings Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
+    "slug": "tools/retirement-savings-calculator",
+    "meta_description": "Find out exactly how much you need to retire at your target age",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-15T23:01:35.565178",
+    "format": "tool",
+    "niche": "finance"
+  },
+  {
     "title": "Resume ATS Score Checker",
     "url": "https://janbarcik.github.io/hive-blog/tools/resume-ats-score-checker/",
     "slug": "tools/resume-ats-score-checker",
@@ -46,16 +56,6 @@
     "meta_description": "Enter all your debts and get an optimized payoff roadmap",
     "worker": "SaasBuilder-913",
     "published_at": "2026-03-15T21:51:10.718602",
-    "format": "tool",
-    "niche": "finance"
-  },
-  {
-    "title": "Retirement Savings Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/retirement-savings-calculator/",
-    "slug": "tools/retirement-savings-calculator",
-    "meta_description": "Find out exactly how much you need to retire at your target age",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-15T21:50:14.958591",
     "format": "tool",
     "niche": "finance"
   },
