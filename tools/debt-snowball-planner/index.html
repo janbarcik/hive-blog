@@ -6,7 +6,7 @@
 <title>Debt Snowball & Avalanche Planner | Free Debt Payoff Calculator</title>
 <meta name="description" content="Free debt snowball and avalanche calculator. Enter your debts and get an optimized payoff roadmap with timeline, interest saved, and monthly schedule.">
 <meta property="og:title" content="Debt Snowball & Avalanche Planner">
-<meta property="og:description" content="Get your optimized debt payoff roadmap. Compare snowball vs avalanche methods and see exactly when you'll be debt-free.">
+<meta property="og:description" content="Get an optimized debt payoff roadmap with timeline, interest saved, and monthly schedule. Free tool.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yoursite.com/tools/debt-snowball-planner">
 <meta property="og:image" content="https://yoursite.com/og-debt-planner.png">
@@ -21,7 +21,7 @@
   "@type": "SoftwareApplication",
   "name": "Debt Snowball & Avalanche Planner",
   "applicationCategory": "FinanceApplication",
-  "description": "Free debt snowball and avalanche calculator with optimized payoff roadmap, timeline, and monthly schedule.",
+  "description": "Enter all your debts and get an optimized payoff roadmap using snowball or avalanche method",
   "operatingSystem": "Web",
   "offers": {
     "@type": "Offer",
@@ -36,8 +36,8 @@
     --primary: #4f46e5;
     --primary-dark: #3730a3;
     --primary-light: #818cf8;
-    --secondary: #10b981;
-    --secondary-dark: #059669;
+    --accent: #10b981;
+    --accent-dark: #059669;
     --danger: #ef4444;
     --warning: #f59e0b;
     --bg: #f8fafc;
@@ -66,6 +66,7 @@
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--bg);
@@ -95,15 +96,15 @@
     height: 56px;
   }
   .nav-logo {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.1rem;
     color: var(--primary);
     display: flex;
     align-items: center;
     gap: 0.4rem;
   }
-  .nav-links { display: flex; gap: 1.5rem; font-size: 0.9rem; }
-  .nav-links a { color: var(--text-muted); font-weight: 500; }
+  .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+  .nav-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
   .nav-links a:hover { color: var(--primary); text-decoration: none; }
 
   /* HERO */
@@ -119,7 +120,7 @@
   .badge {
     background: rgba(255,255,255,0.2);
     border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 999px;
+    border-radius: 20px;
     padding: 0.3rem 0.9rem;
     font-size: 0.8rem;
     font-weight: 600;
@@ -156,31 +157,30 @@
   /* CARD */
   .card {
     background: var(--surface);
-    border-radius: var(--radius);
     border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
     box-shadow: var(--shadow);
-    overflow: hidden;
   }
-  .card-header {
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface2);
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
+    color: var(--text);
   }
-  .card-header h2 { font-size: 1rem; font-weight: 700; }
-  .card-body { padding: 1.5rem; }
 
   /* FORM */
-  .form-group { margin-bottom: 1.25rem; }
-  label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem; }
+  .form-group { margin-bottom: 1rem; }
+  label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.35rem; }
   input, select {
     width: 100%;
-    padding: 0.65rem 0.9rem;
+    padding: 0.6rem 0.85rem;
     border: 1.5px solid var(--border);
     border-radius: var(--radius-sm);
-    background: var(--surface);
+    background: var(--bg);
     color: var(--text);
     font-size: 0.95rem;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -191,32 +191,6 @@
     box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
   }
   input.error { border-color: var(--danger); }
-  .error-msg { color: var(--danger); font-size: 0.78rem; margin-top: 0.3rem; display: none; }
-  .error-msg.show { display: block; }
-
-  /* METHOD TOGGLE */
-  .method-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-  .method-btn {
-    padding: 0.75rem;
-    border: 2px solid var(--border);
-    border-radius: var(--radius-sm);
-    background: var(--surface);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.2s;
-  }
-  .method-btn:hover { border-color: var(--primary); color: var(--primary); }
-  .method-btn.active {
-    border-color: var(--primary);
-    background: var(--primary);
-    color: white;
-  }
-  .method-btn .method-icon { font-size: 1.3rem; display: block; margin-bottom: 0.2rem; }
-  .method-btn .method-name { display: block; }
-  .method-btn .method-desc { font-size: 0.72rem; opacity: 0.8; display: block; }
 
   /* DEBT ROWS */
   .debt-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
@@ -224,7 +198,7 @@
     background: var(--surface2);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    padding: 0.9rem;
+    padding: 0.85rem;
     position: relative;
   }
   .debt-row-header {
@@ -233,48 +207,38 @@
     align-items: center;
     margin-bottom: 0.6rem;
   }
-  .debt-row-title { font-size: 0.85rem; font-weight: 700; color: var(--primary); }
-  .remove-debt {
+  .debt-row-title { font-weight: 700; font-size: 0.9rem; color: var(--primary); }
+  .debt-row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  @media (min-width: 480px) {
+    .debt-row-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  }
+  .debt-row input { background: var(--surface); font-size: 0.88rem; padding: 0.5rem 0.7rem; }
+  .btn-remove {
     background: none;
     border: none;
     color: var(--danger);
     cursor: pointer;
     font-size: 1.1rem;
-    padding: 0.1rem 0.3rem;
+    padding: 0.2rem 0.4rem;
     border-radius: 4px;
     line-height: 1;
+    transition: background 0.2s;
   }
-  .remove-debt:hover { background: rgba(239,68,68,0.1); }
-  .debt-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-  @media (min-width: 480px) { .debt-fields { grid-template-columns: 1fr 1fr 1fr 1fr; } }
-  .debt-fields .form-group { margin-bottom: 0; }
-  .debt-fields label { font-size: 0.75rem; }
-  .debt-fields input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
-
-  .add-debt-btn {
-    width: 100%;
-    padding: 0.65rem;
-    border: 2px dashed var(--primary);
-    border-radius: var(--radius-sm);
-    background: transparent;
-    color: var(--primary);
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .add-debt-btn:hover { background: rgba(79,70,229,0.08); }
+  .btn-remove:hover { background: rgba(239,68,68,0.1); }
 
   /* BUTTONS */
   .btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 0.4rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.65rem 1.25rem;
     border-radius: var(--radius-sm);
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
     border: none;
     transition: all 0.2s;
@@ -284,44 +248,108 @@
     background: var(--primary);
     color: white;
     width: 100%;
+    justify-content: center;
     font-size: 1rem;
-    padding: 0.9rem;
+    padding: 0.8rem;
   }
   .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
   .btn-secondary {
     background: var(--surface2);
     color: var(--text);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
   }
   .btn-secondary:hover { background: var(--border); }
-  .btn-success { background: var(--secondary); color: white; }
-  .btn-success:hover { background: var(--secondary-dark); }
+  .btn-accent {
+    background: var(--accent);
+    color: white;
+  }
+  .btn-accent:hover { background: var(--accent-dark); }
+  .btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+  }
+  .btn-outline:hover { background: var(--primary); color: white; }
+  .btn-add {
+    background: none;
+    border: 2px dashed var(--border);
+    color: var(--text-muted);
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-add:hover { border-color: var(--primary); color: var(--primary); background: rgba(79,70,229,0.05); }
+
+  /* METHOD TOGGLE */
+  .method-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .method-option {
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .method-option.active {
+    border-color: var(--primary);
+    background: rgba(79,70,229,0.08);
+  }
+  .method-option input[type="radio"] { display: none; }
+  .method-option-title { font-weight: 700; font-size: 0.9rem; }
+  .method-option-desc { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+  /* ERROR */
+  .error-msg {
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: var(--danger);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+  .error-msg.show { display: block; }
 
   /* RESULTS */
-  .results-section { display: none; }
-  .results-section.show { display: block; }
+  #results { display: none; }
+  #results.show { display: block; }
 
+  /* SUMMARY CARDS */
   .summary-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
-  @media (min-width: 600px) { .summary-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 600px) {
+    .summary-grid { grid-template-columns: repeat(4, 1fr); }
+  }
   .summary-card {
-    background: var(--surface2);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     padding: 1rem;
     text-align: center;
   }
-  .summary-card .s-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-  .summary-card .s-value { font-size: 1.4rem; font-weight: 800; color: var(--primary); margin: 0.2rem 0; }
-  .summary-card .s-sub { font-size: 0.75rem; color: var(--text-muted); }
-  .summary-card.highlight { background: linear-gradient(135deg, var(--primary), #7c3aed); border-color: transparent; }
-  .summary-card.highlight .s-label, .summary-card.highlight .s-value, .summary-card.highlight .s-sub { color: white; }
-  .summary-card.green { background: linear-gradient(135deg, var(--secondary), #0d9488); border-color: transparent; }
-  .summary-card.green .s-label, .summary-card.green .s-value, .summary-card.green .s-sub { color: white; }
+  .summary-card .value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+  .summary-card .value.green { color: var(--accent); }
+  .summary-card .value.orange { color: var(--warning); }
+  .summary-card .label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 
   /* PAYOFF ORDER */
   .payoff-order { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
@@ -329,32 +357,35 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.9rem 1rem;
-    background: var(--surface2);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    position: relative;
-    overflow: hidden;
-  }
-  .payoff-item::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 4px;
-    background: var(--primary);
+    padding: 0.85rem 1rem;
   }
   .payoff-num {
-    width: 28px; height: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
     background: var(--primary);
     color: white;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
     font-weight: 800;
+    font-size: 0.85rem;
     flex-shrink: 0;
   }
-  .payoff-info { flex: 1; min-width: 0; }
-  .payoff-name { font-weight: 700; font-size: 0.9rem; }
-  .payoff-details { font-size: 0.78rem
+  .payoff-info { flex: 1; }
+  .payoff-name { font-weight: 700; font-size: 0.95rem; }
+  .payoff-meta { font-size: 0.8rem; color: var(--text-muted); }
+  .payoff-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse
