@@ -1,5 +1,15 @@
 [
   {
+    "title": "Calorie Deficit & Macro Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/calorie-deficit-macro-calculator/",
+    "slug": "tools/calorie-deficit-macro-calculator",
+    "meta_description": "Get your daily calorie target, protein, carbs and fat breakdown",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-15T21:35:30.578358",
+    "format": "tool",
+    "niche": "health"
+  },
+  {
     "title": "Email Subject Line Scorer",
     "url": "https://janbarcik.github.io/hive-blog/tools/email-subject-line-scorer/",
     "slug": "tools/email-subject-line-scorer",
@@ -68,16 +78,6 @@
     "published_at": "2026-03-15T20:48:39.716755",
     "format": "tool",
     "niche": "career"
-  },
-  {
-    "title": "Calorie Deficit & Macro Calculator",
-    "url": "https://janbarcik.github.io/hive-blog/tools/calorie-deficit-macro-calculator/",
-    "slug": "tools/calorie-deficit-macro-calculator",
-    "meta_description": "Get your daily calorie target, protein, carbs and fat breakdown",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-15T20:47:42.193034",
-    "format": "tool",
-    "niche": "health"
   },
   {
     "title": "Top Noise-Cancelling Headphones Reviews: Find Your Perfect Pair",

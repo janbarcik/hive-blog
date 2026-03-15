@@ -3,32 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calorie Deficit & Macro Calculator | Free TDEE & Weight Loss Tool</title>
-<meta name="description" content="Calculate your daily calorie target, TDEE, and macro breakdown (protein, carbs, fat) for weight loss, maintenance, or muscle gain. Free calorie deficit calculator.">
+<title>Calorie Deficit & Macro Calculator | Free Weight Loss Tool</title>
+<meta name="description" content="Calculate your daily calorie target, TDEE, and protein/carbs/fat macro breakdown for weight loss, maintenance, or muscle gain. Free, science-based calculator.">
+<meta name="keywords" content="calorie deficit calculator, macro calculator for weight loss, TDEE calculator, protein calculator, weight loss calories">
 <meta property="og:title" content="Calorie Deficit & Macro Calculator">
-<meta property="og:description" content="Get your personalized daily calorie target and macro breakdown for your fitness goals. Free TDEE calculator.">
+<meta property="og:description" content="Get your personalized daily calorie target and macro breakdown for weight loss or muscle gain.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/tools/calorie-deficit-macro-calculator">
-<meta property="og:image" content="https://example.com/og-calorie-calculator.png">
+<meta property="og:url" content="https://yoursite.com/calorie-macro-calculator">
+<meta property="og:image" content="https://yoursite.com/og-calorie-calculator.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Calorie Deficit & Macro Calculator">
-<meta name="twitter:description" content="Free tool to calculate your TDEE, calorie deficit, and macro breakdown for weight loss or muscle gain.">
-<meta name="keywords" content="calorie deficit calculator, macro calculator for weight loss, TDEE calculator, protein carbs fat calculator, weight loss calories">
-<link rel="canonical" href="https://example.com/tools/calorie-deficit-macro-calculator">
+<meta name="twitter:description" content="Free tool: Calculate your TDEE, calorie deficit, and macro breakdown for your fitness goals.">
+<link rel="canonical" href="https://yoursite.com/calorie-macro-calculator">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Calorie Deficit & Macro Calculator",
-  "description": "Calculate your daily calorie target, TDEE, and macro breakdown for weight loss, maintenance, or muscle gain.",
   "applicationCategory": "HealthApplication",
+  "description": "Calculate your daily calorie target, TDEE, and protein/carbs/fat macro breakdown for weight loss, maintenance, or muscle gain.",
   "operatingSystem": "Web",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "url": "https://example.com/tools/calorie-deficit-macro-calculator"
+  "featureList": ["TDEE Calculation", "Calorie Deficit Planning", "Macro Breakdown", "Weekly Projections"]
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -38,8 +38,8 @@
     --primary-dark: #3730a3;
     --primary-light: #818cf8;
     --secondary: #06b6d4;
-    --accent: #f59e0b;
     --success: #10b981;
+    --warning: #f59e0b;
     --danger: #ef4444;
     --bg: #f8fafc;
     --surface: #ffffff;
@@ -52,6 +52,7 @@
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
     --radius: 12px;
     --radius-sm: 8px;
+    --transition: 0.2s ease;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -109,7 +110,7 @@
     color: var(--text-muted);
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color var(--transition);
   }
   .nav-links a:hover { color: var(--primary); text-decoration: none; }
 
@@ -124,10 +125,10 @@
   .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 560px; margin: 0 auto; }
   .hero-badges {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.75rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
   }
   .badge {
     background: rgba(255,255,255,0.2);
@@ -138,19 +139,20 @@
     font-weight: 600;
   }
 
-  /* MAIN LAYOUT */
-  .container { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem; }
+  /* LAYOUT */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
+  .main-content { padding: 2rem 0 3rem; }
 
   /* AD SLOT */
   .ad-slot {
     background: var(--surface2);
-    border: 2px dashed var(--border);
+    border: 1px dashed var(--border);
     border-radius: var(--radius-sm);
     padding: 1rem;
     text-align: center;
     color: var(--text-light);
     font-size: 0.8rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     min-height: 90px;
     display: flex;
     align-items: center;
@@ -160,54 +162,61 @@
   /* CARD */
   .card {
     background: var(--surface);
-    border-radius: var(--radius);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow);
+    border-radius: var(--radius);
     padding: 1.75rem;
+    box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
   }
   .card-title {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--text);
     margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--text);
   }
 
   /* FORM */
   .form-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 1.25rem;
   }
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-group label {
+  .form-group.full { grid-column: 1 / -1; }
+  label {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
-  .form-group input,
-  .form-group select {
-    padding: 0.65rem 0.9rem;
-    border: 2px solid var(--border);
+  input, select {
+    background: var(--surface2);
+    border: 1.5px solid var(--border);
     border-radius: var(--radius-sm);
-    background: var(--bg);
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
     color: var(--text);
-    font-size: 1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
     width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
   }
-  .form-group input:focus,
-  .form-group select:focus {
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+  }
+  input:focus, select:focus {
+    outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
   }
-  .form-group input.error { border-color: var(--danger); }
+  input.error, select.error { border-color: var(--danger); }
   .error-msg {
     color: var(--danger);
     font-size: 0.78rem;
@@ -225,26 +234,24 @@
   .radio-btn {
     flex: 1;
     min-width: 80px;
-    position: relative;
   }
-  .radio-btn input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .radio-btn input[type="radio"] { display: none; }
   .radio-btn label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    text-align: center;
     padding: 0.6rem 0.5rem;
-    border: 2px solid var(--border);
+    border: 1.5px solid var(--border);
     border-radius: var(--radius-sm);
     cursor: pointer;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-muted);
-    transition: all 0.2s;
-    text-align: center;
     text-transform: none;
     letter-spacing: 0;
+    color: var(--text-muted);
+    background: var(--surface2);
+    transition: all var(--transition);
   }
-  .radio-btn input:checked + label {
+  .radio-btn input[type="radio"]:checked + label {
     border-color: var(--primary);
     background: var(--primary);
     color: white;
@@ -263,7 +270,7 @@
     font-weight: 700;
     cursor: pointer;
     border: none;
-    transition: all 0.2s;
+    transition: all var(--transition);
     text-decoration: none;
   }
   .btn-primary {
@@ -283,7 +290,7 @@
   .btn-secondary {
     background: var(--surface2);
     color: var(--text);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
   }
@@ -307,7 +314,7 @@
     margin-bottom: 1.5rem;
   }
   .results-title { font-size: 1.3rem; font-weight: 800; }
-  .results-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .results-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
   /* STAT CARDS */
   .stats-grid {
@@ -330,13 +337,13 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 4px;
+    height: 3px;
   }
   .stat-card.blue::before { background: var(--primary); }
   .stat-card.green::before { background: var(--success); }
-  .stat-card.orange::before { background: var(--accent); }
+  .stat-card.orange::before { background: var(--warning); }
   .stat-card.cyan::before { background: var(--secondary); }
-  .stat-card.red::before { background: var(--danger); }
+  .stat-card.purple::before { background: #8b5cf6; }
   .stat-value {
     font-size: 1.9rem;
     font-weight: 800;
@@ -345,56 +352,36 @@
   }
   .stat-card.blue .stat-value { color: var(--primary); }
   .stat-card.green .stat-value { color: var(--success); }
-  .stat-card.orange .stat-value { color: var(--accent); }
+  .stat-card.orange .stat-value { color: var(--warning); }
   .stat-card.cyan .stat-value { color: var(--secondary); }
-  .stat-card.red .stat-value { color: var(--danger); }
-  .stat-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-card.purple .stat-value { color: #8b5cf6; }
+  .stat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
   .stat-sub { font-size: 0.75rem; color: var(--text-light); margin-top: 0.2rem; }
 
   /* MACRO BARS */
   .macro-section { margin-bottom: 1.5rem; }
-  .macro-bar-wrap { margin-bottom: 1rem; }
+  .macro-bar-item { margin-bottom: 1rem; }
   .macro-bar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.35rem;
   }
-  .macro-name { font-weight: 700; font-size: 0.95rem; }
-  .macro-grams { font-size: 0.85rem; color: var(--text-muted); }
-  .macro-bar-bg {
-    height: 12px;
+  .macro-name { font-weight: 700; font-size: 0.9rem; }
+  .macro-detail { font-size: 0.85rem; color: var(--text-muted); }
+  .bar-track {
+    height: 10px;
     background: var(--surface2);
-    border-radius: 6px;
+    border-radius: 10px;
     overflow: hidden;
   }
-  .macro-bar-fill {
+  .bar-fill {
     height: 100%;
-    border-radius: 6px;
+    border-radius: 10px;
     transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
   }
-  .macro-bar-fill.protein { background: linear-gradient(90deg, #4f46e5, #818cf8); }
-  .macro-bar-fill.carbs { background: linear-gradient(90deg, #f59e0b, #fcd34d); }
-  .macro-bar-fill.fat { background: linear-gradient(90deg, #ef4444, #fca5a5); }
+  .bar-protein { background: linear-gradient(90deg, #4f46e5, #818cf8); }
+  .bar-carbs { background: linear-gradient(90deg, #f59e0b, #fcd34d); }
+  .bar-fat { background: linear-gradient(90deg, #ef4444, #f87171); }
 
   /* CHART */
-  .chart-container {
-    position: relative;
-    height: 260px;
-    max-width: 260px;
-    margin: 0 auto;
-  }
-
-  /* PROJECTION TABLE */
-  .projection-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-  }
-  .projection-table th {
-    background: var(--surface2);
-    padding: 0.65rem 0.75rem;
-    text-align: left;
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform
