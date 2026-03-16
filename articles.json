@@ -1,5 +1,15 @@
 [
   {
+    "title": "Salary Negotiation Simulator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/salary-negotiation-simulator/",
+    "slug": "tools/salary-negotiation-simulator",
+    "meta_description": "Simulate salary negotiation and get your optimal ask strategy",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-16T09:18:38.438296",
+    "format": "tool",
+    "niche": "career"
+  },
+  {
     "title": "Email Subject Line Scorer",
     "url": "https://janbarcik.github.io/hive-blog/tools/email-subject-line-scorer/",
     "slug": "tools/email-subject-line-scorer",
