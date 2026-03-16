@@ -1,5 +1,15 @@
 [
   {
+    "title": "Email Subject Line Scorer",
+    "url": "https://janbarcik.github.io/hive-blog/tools/email-subject-line-scorer/",
+    "slug": "tools/email-subject-line-scorer",
+    "meta_description": "Score your email subject lines and get AI-powered improvements",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-16T08:55:33.806065",
+    "format": "tool",
+    "niche": "marketing"
+  },
+  {
     "title": "Freelance Rate Calculator",
     "url": "https://janbarcik.github.io/hive-blog/tools/freelance-rate-calculator/",
     "slug": "tools/freelance-rate-calculator",
@@ -68,16 +78,6 @@
     "published_at": "2026-03-15T22:55:55.141427",
     "format": "tool",
     "niche": "finance"
-  },
-  {
-    "title": "Email Subject Line Scorer",
-    "url": "https://janbarcik.github.io/hive-blog/tools/email-subject-line-scorer/",
-    "slug": "tools/email-subject-line-scorer",
-    "meta_description": "Score your email subject lines and get AI-powered improvements",
-    "worker": "SaasBuilder-913",
-    "published_at": "2026-03-15T22:19:20.516654",
-    "format": "tool",
-    "niche": "marketing"
   },
   {
     "title": "Top Noise-Cancelling Headphones Reviews: Find Your Perfect Pair",

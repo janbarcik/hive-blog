@@ -4,16 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Email Subject Line Scorer – Test & Improve Your Open Rates</title>
-<meta name="description" content="Score your email subject lines instantly. Get spam score, open rate estimate, power words analysis, and AI-powered rewrites to boost your email marketing results.">
-<meta property="og:title" content="Email Subject Line Scorer – Test & Improve Your Open Rates">
-<meta property="og:description" content="Score your email subject lines instantly. Get spam score, open rate estimate, power words analysis, and AI-powered rewrites.">
+<meta name="description" content="Score your email subject lines instantly. Get spam score, open rate estimate, power words analysis, and AI-powered rewrites to boost your email marketing.">
+<meta property="og:title" content="Email Subject Line Scorer – Free Tool">
+<meta property="og:description" content="Test your email subject lines. Get spam score, open rate predictions, and AI-powered improvements.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yoursite.com/tools/email-subject-line-scorer">
 <meta property="og:image" content="https://yoursite.com/og-email-scorer.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Email Subject Line Scorer">
 <meta name="twitter:description" content="Score your email subject lines and get AI-powered improvements.">
-<meta name="keywords" content="email subject line tester, subject line score, email open rate, spam score checker, email marketing tool">
 <link rel="canonical" href="https://yoursite.com/tools/email-subject-line-scorer">
 <script type="application/ld+json">
 {
@@ -23,12 +22,9 @@
   "description": "Score your email subject lines and get AI-powered improvements including spam score, open rate estimate, and rewrites.",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "url": "https://yoursite.com/tools/email-subject-line-scorer"
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "url": "https://yoursite.com/tools/email-subject-line-scorer",
+  "keywords": "email subject line tester, subject line score, email open rate"
 }
 </script>
 <style>
@@ -36,10 +32,9 @@
     --primary: #6366f1;
     --primary-dark: #4f46e5;
     --primary-light: #e0e7ff;
-    --secondary: #f59e0b;
-    --success: #10b981;
-    --danger: #ef4444;
+    --secondary: #10b981;
     --warning: #f59e0b;
+    --danger: #ef4444;
     --bg: #f8fafc;
     --surface: #ffffff;
     --surface2: #f1f5f9;
@@ -61,15 +56,14 @@
       --text: #f1f5f9;
       --text-muted: #94a3b8;
       --text-light: #64748b;
-      --primary-light: #1e1b4b;
-      --shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -2px rgba(0,0,0,0.3);
+      --primary-light: #312e81;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
     }
   }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -82,7 +76,7 @@
   nav {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -104,50 +98,30 @@
     align-items: center;
     gap: 0.4rem;
   }
-  .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-  .nav-links a {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
+  .nav-links { display: flex; gap: 1.5rem; font-size: 0.9rem; }
+  .nav-links a { color: var(--text-muted); font-weight: 500; }
   .nav-links a:hover { color: var(--primary); text-decoration: none; }
 
   /* LAYOUT */
   .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
-  .page-header {
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+    color: white;
+    padding: 3rem 1.5rem 2.5rem;
     text-align: center;
-    padding: 3rem 1rem 2rem;
   }
-  .page-header h1 {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.75rem;
-    line-height: 1.2;
-  }
-  .page-header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    max-width: 560px;
-    margin: 0 auto;
-  }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 0.75rem; }
+  .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 560px; margin: 0 auto; }
+  .hero-badges { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; }
   .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    background: var(--primary-light);
-    color: var(--primary);
-    font-size: 0.75rem;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
   }
 
   /* AD SLOT */
@@ -159,7 +133,7 @@
     text-align: center;
     color: var(--text-light);
     font-size: 0.8rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     min-height: 90px;
     display: flex;
     align-items: center;
@@ -190,22 +164,19 @@
     display: block;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--text);
+    color: var(--text-muted);
     margin-bottom: 0.4rem;
-  }
-  label span.optional {
-    font-weight: 400;
-    color: var(--text-light);
-    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
   input[type="text"], input[type="email"], select, textarea {
     width: 100%;
-    padding: 0.7rem 1rem;
-    border: 1.5px solid var(--border);
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border);
     border-radius: var(--radius-sm);
     background: var(--bg);
     color: var(--text);
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.2s, box-shadow 0.2s;
     outline: none;
@@ -215,33 +186,25 @@
     box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
   }
   input.error, select.error { border-color: var(--danger); }
-  .error-msg {
-    color: var(--danger);
-    font-size: 0.8rem;
-    margin-top: 0.3rem;
-    display: none;
-  }
+  .error-msg { color: var(--danger); font-size: 0.8rem; margin-top: 0.3rem; display: none; }
   .error-msg.show { display: block; }
-  .char-count {
-    text-align: right;
-    font-size: 0.75rem;
-    color: var(--text-light);
-    margin-top: 0.25rem;
-  }
+  .char-count { font-size: 0.78rem; color: var(--text-light); text-align: right; margin-top: 0.25rem; }
   .char-count.warn { color: var(--warning); }
   .char-count.bad { color: var(--danger); }
 
   .api-hint {
     background: var(--primary-light);
-    border: 1px solid rgba(99,102,241,0.2);
     border-radius: var(--radius-sm);
     padding: 0.75rem 1rem;
-    font-size: 0.82rem;
-    color: var(--primary);
+    font-size: 0.85rem;
+    color: var(--primary-dark);
     margin-bottom: 1.25rem;
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    .api-hint { color: #a5b4fc; }
   }
 
   /* BUTTON */
@@ -250,10 +213,10 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+    padding: 0.8rem 1.75rem;
     border-radius: var(--radius-sm);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     border: none;
     transition: all 0.2s;
@@ -264,7 +227,7 @@
     color: white;
     width: 100%;
     font-size: 1.05rem;
-    padding: 0.9rem;
+    padding: 0.95rem;
     box-shadow: 0 4px 14px rgba(99,102,241,0.35);
   }
   .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(99,102,241,0.45); }
@@ -274,22 +237,22 @@
     background: var(--surface2);
     color: var(--text);
     border: 1px solid var(--border);
-    font-size: 0.875rem;
-    padding: 0.55rem 1.1rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
   .btn-secondary:hover { background: var(--border); }
   .btn-share {
     background: #1da1f2;
     color: white;
-    font-size: 0.875rem;
-    padding: 0.55rem 1.1rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
-  .btn-share:hover { background: #0d8fd9; }
+  .btn-share:hover { background: #0c85d0; }
 
   /* LOADING */
   .spinner {
-    width: 18px; height: 18px;
-    border: 2px solid rgba(255,255,255,0.3);
+    width: 20px; height: 20px;
+    border: 2px solid rgba(255,255,255,0.4);
     border-top-color: white;
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
@@ -304,17 +267,14 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 1rem;
     margin-bottom: 1.5rem;
   }
-  .results-title {
-    font-size: 1.3rem;
-    font-weight: 800;
-  }
-  .results-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .results-title { font-size: 1.3rem; font-weight: 800; }
+  .results-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
-  /* SCORE RING */
-  .scores-grid {
+  /* SCORE GRID */
+  .score-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 1rem;
@@ -326,80 +286,76 @@
     padding: 1.25rem;
     text-align: center;
     border: 1px solid var(--border);
-  }
-  .score-ring-wrap {
     position: relative;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 0.75rem;
-  }
-  .score-ring-wrap svg { transform: rotate(-90deg); }
-  .score-ring-bg { fill: none; stroke: var(--border); stroke-width: 6; }
-  .score-ring-fill {
-    fill: none;
-    stroke-width: 6;
-    stroke-linecap: round;
-    transition: stroke-dashoffset 1s ease;
-  }
-  .score-number {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;
-    font-weight: 800;
-    line-height: 1;
-  }
-  .score-label {
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .score-sub {
-    font-size: 0.72rem;
-    color: var(--text-light);
-    margin-top: 0.2rem;
-  }
-
-  /* METER BAR */
-  .meter-wrap { margin-bottom: 1rem; }
-  .meter-label {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.82rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-  }
-  .meter-bar {
-    height: 8px;
-    background: var(--border);
-    border-radius: 999px;
     overflow: hidden;
   }
-  .meter-fill {
-    height: 100%;
-    border-radius: 999px;
-    transition: width 1s ease;
+  .score-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
   }
+  .score-card.green::before { background: var(--secondary); }
+  .score-card.yellow::before { background: var(--warning); }
+  .score-card.red::before { background: var(--danger); }
+  .score-card.blue::before { background: var(--primary); }
+  .score-value {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .score-card.green .score-value { color: var(--secondary); }
+  .score-card.yellow .score-value { color: var(--warning); }
+  .score-card.red .score-value { color: var(--danger); }
+  .score-card.blue .score-value { color: var(--primary); }
+  .score-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .score-sub { font-size: 0.75rem; color: var(--text-light); margin-top: 0.25rem; }
+
+  /* PROGRESS BAR */
+  .progress-wrap { margin-bottom: 1.5rem; }
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .progress-bar {
+    height: 10px;
+    background: var(--surface2);
+    border-radius: 99px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 1s cubic-bezier(0.4,0,0.2,1);
+    width: 0;
+  }
+  .progress-fill.green { background: linear-gradient(90deg, #10b981, #34d399); }
+  .progress-fill.yellow { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .progress-fill.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+  .progress-fill.blue { background: linear-gradient(90deg, #6366f1, #818cf8); }
 
   /* TAGS */
-  .tags-wrap { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+  .tags-wrap { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
   .tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 0.25rem 0.65rem;
-    border-radius: 999px;
-    font-size: 0.78rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
     font-weight: 600;
   }
-  .tag-power { background: #d1fae5; color: #065f46; }
-  .tag-spam { background: #fee2e2; color: #991b1b; }
-  .tag-neutral { background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
+  .tag-green { background: #d1fae5; color: #065f46; }
+  .tag-red { background: #fee2e2; color: #991b1b; }
+  .tag-blue { background: #e0e7ff; color: #3730a3; }
+  .tag-yellow { background: #fef3c7; color: #92400e; }
   @media (prefers-color-scheme: dark) {
-    .tag-power { background: #064e3b; color: #6ee7b7; }
-    .tag-spam { background: #7f1d1d; color: #fca5a5; }
+    .tag-green { background: #064e3b; color: #6ee7b7; }
+    .tag-red { background: #7f1d1d; color: #fca5a5; }
+    .tag-blue { background: #312e81; color: #a5b4fc; }
+    .tag-yellow { background: #78350f; color: #fde68a; }
   }
 
   /* REWRITES */
@@ -411,5 +367,4 @@
     margin-bottom: 0.75rem;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem
+    justify
