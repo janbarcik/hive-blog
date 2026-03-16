@@ -1,5 +1,15 @@
 [
   {
+    "title": "One Rep Max Calculator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/one-rep-max-calculator/",
+    "slug": "tools/one-rep-max-calculator",
+    "meta_description": "Calculate your 1RM for any lift and get a full percentage table",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-16T09:19:33.693286",
+    "format": "tool",
+    "niche": "fitness"
+  },
+  {
     "title": "Salary Negotiation Simulator",
     "url": "https://janbarcik.github.io/hive-blog/tools/salary-negotiation-simulator/",
     "slug": "tools/salary-negotiation-simulator",

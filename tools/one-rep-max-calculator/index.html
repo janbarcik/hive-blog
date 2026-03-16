@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Rep Max Calculator | 1RM Calculator for Any Lift</title>
+<meta name="description" content="Calculate your one rep max (1RM) for any lift instantly. Get a full percentage table from 50% to 100% and training zones for bench press, squat, deadlift and more.">
+<meta property="og:title" content="One Rep Max Calculator | 1RM Calculator">
+<meta property="og:description" content="Calculate your 1RM for any lift and get a full percentage table plus training zones. Free, instant, no signup required.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yoursite.com/tools/one-rep-max-calculator">
+<meta property="og:image" content="https://yoursite.com/images/1rm-calculator-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One Rep Max Calculator | 1RM Calculator">
+<meta name="twitter:description" content="Calculate your 1RM for any lift and get a full percentage table plus training zones.">
+<meta name="keywords" content="one rep max calculator, 1RM calculator, bench press max, squat max, deadlift max, strength training">
+<link rel="canonical" href="https://yoursite.com/tools/one-rep-max-calculator">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "One Rep Max Calculator",
+  "description": "Calculate your one rep max (1RM) for any lift and get a full percentage table from 50% to 100% plus training zones.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://yoursite.com/tools/one-rep-max-calculator"
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --primary: #e63946;
+    --primary-dark: #c1121f;
+    --primary-light: #ff6b6b;
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --surface2: #f1f3f5;
+    --text: #212529;
+    --text-muted: #6c757d;
+    --border: #dee2e6;
+    --success: #2d6a4f;
+    --success-bg: #d8f3dc;
+    --warning: #7b4f12;
+    --warning-bg: #fff3cd;
+    --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --transition: 0.2s ease;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #21262d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --border: #30363d;
+      --shadow: 0 2px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+      --success: #56d364;
+      --success-bg: #0d2818;
+      --warning: #e3b341;
+      --warning-bg: #2d1f00;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+  }
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+  .nav-links a:hover { color: var(--primary); }
+
+  /* LAYOUT */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+  }
+
+  /* AD SLOT */
+  .ad-slot {
+    background: var(--surface2);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* HERO */
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* CARD */
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* FORM */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  @media (max-width: 600px) {
+    .form-grid { grid-template-columns: 1fr; }
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(230,57,70,0.15);
+  }
+  .form-group input.error { border-color: #dc3545; }
+  .error-msg {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    display: none;
+  }
+  .error-msg.show { display: block; }
+
+  /* UNIT TOGGLE */
+  .unit-toggle {
+    display: flex;
+    gap: 0;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+  .unit-toggle button {
+    padding: 0.5rem 1.25rem;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .unit-toggle button.active {
+    background: var(--primary);
+    color: white;
+  }
+
+  /* FORMULA SELECT */
+  .formula-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .formula-row label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .formula-row select {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color var(--transition);
+  }
+  .formula-row select:focus { border-color: var(--primary); }
+
+  /* BUTTON */
+  .btn-calc {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+    letter-spacing: 0.02em;
+  }
+  .btn-calc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230,57,70,0.35);
+  }
+  .btn-calc:active { transform: translateY(0); }
+
+  /* RESULTS */
+  #results { display: none; }
+
+  .result-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+  .result-hero .exercise-name {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .result-hero .one-rm {
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .result-hero .one-rm-label {
+    font-size: 1rem;
+    opacity: 0.85;
+  }
+  .result-hero .formula-used {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 0.75rem;
+  }
+
+  /* STATS ROW */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 500px) {
+    .stats-row { grid-template-columns: 1fr 1fr; }
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .stat-card .stat-val {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+  .stat-card .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 0.25rem;
+  }
+
+  /* PERCENTAGE TABLE */
+  .pct-table-wrapper { overflow-x: auto; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  thead th {
+    background: var(--surface2);
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border);
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background var(--transition);
+  }
+  tbody tr:hover { background: var(--surface2); }
+  tbody td {
+    padding: 0.6rem 0.75rem;
+    font-weight: 500;
+  }
+  .zone-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .zone-endurance { background: #caf0f8; color: #023e8a; }
+  .zone-hypertrophy { background: #d8f3dc; color: #1b4332; }
+  .zone-strength { background: #fff3cd; color: #7b4f12; }
+  .zone-power { background: #ffe5d9; color: #7d1d00; }
+  .zone-max { background: #ffccd5; color: #6b0018; }
+
+  @media (prefers-color-scheme: dark) {
+    .zone-endurance { background: #023e8a; color: #caf0f8; }
+    .zone-hypertrophy { background: #1b4332; color: #d8f3dc; }
+    .zone-strength { background: #7b4f12; color: #fff3cd; }
+    .zone-power { background: #7d1d00; color: #ffe5d9; }
