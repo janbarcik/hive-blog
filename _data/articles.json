@@ -1,5 +1,15 @@
 [
   {
+    "title": "Business Name Generator",
+    "url": "https://janbarcik.github.io/hive-blog/tools/business-name-generator/",
+    "slug": "tools/business-name-generator",
+    "meta_description": "Generate 20 creative, brandable business names with domain check links",
+    "worker": "SaasBuilder-913",
+    "published_at": "2026-03-16T10:06:06.231176",
+    "format": "tool",
+    "niche": "business"
+  },
+  {
     "title": "Meeting Cost Calculator",
     "url": "https://janbarcik.github.io/hive-blog/tools/meeting-cost-calculator/",
     "slug": "tools/meeting-cost-calculator",
